@@ -77,7 +77,7 @@ a:hover {
 }
 
 .MainMenu {
-    background: linear-gradient(180deg, #5ee7b2, #008a27);
+    background: linear-gradient(180deg, #5e99e7, #002c8a);
     text-shadow: black 1px 1px 1px;
     color: white;
     width: 100%;
@@ -92,7 +92,7 @@ a:hover {
 .Button {
     margin: 15px;
     padding: 12px;
-    border: white solid 2px;
+    border: white solid 1px;
     border-radius: 10px;
     color: #ffffff;
     text-align: center;
@@ -103,7 +103,7 @@ a:hover {
 }
 
 .Button:hover {
-    background-color: #286283;
+    background-color: #6199d0;
     transform: scale(0.97);
     transition: 0.2s;
 }
