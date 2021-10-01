@@ -1,11 +1,12 @@
 html {
     min-height: 100vh;
     width: 100vw;
+    transition: 0.2s;
 }
 
 body {
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: 1fr auto;
     min-height: 100vh;
     width: 100vw;
     margin: 0;
@@ -30,6 +31,9 @@ footer {
 
 .IconContainer {
     text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    place-items: center;
 }
 
 .Icon {
@@ -68,14 +72,14 @@ a:hover {
     transition: 0.2s;
 }
 
+.Section {
+    padding: 2%;
+}
+
 .MainMenu {
-    display: grid;
-    grid-template-rows: 1fr 2fr 2fr;
     background: linear-gradient(180deg, #5ee7b2, #008a27);
     text-shadow: black 1px 1px 1px;
     color: white;
-    align-content: space-evenly;
-    align-items: center;
     width: 100%;
     height: 100%;
 }
