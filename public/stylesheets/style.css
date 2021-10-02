@@ -100,6 +100,7 @@ a:hover {
     transition: 0.2s;
     box-shadow: rgba(58, 58, 58, 0.4) 2px 2px 2px;
     font-size: 1.8em;
+    background-color: #2957b9;
 }
 
 .Button:hover {
