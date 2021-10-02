@@ -36,6 +36,13 @@ footer {
     place-items: center;
 }
 
+.IconContainerVertical {
+    text-align: center;
+    display: grid;
+    grid-template-rows: auto auto;
+    place-items: center;
+}
+
 .Icon {
     font-size: 3.6em;
 }
