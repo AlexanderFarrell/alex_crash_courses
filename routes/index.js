@@ -8,6 +8,8 @@ function add_page(router, path, page_title, page_content){
 }
 
 add_page(router, '/', 'Home', 'index.ejs');
+add_page(router, '/privacy', 'Privacy Policy', 'privacy.ejs');
+add_page(router, '/terms', 'Terms and Conditions', 'terms.ejs');
 
 /* GET home page. */
 // router.get('/', function(req, res, next) {
