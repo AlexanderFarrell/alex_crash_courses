@@ -1,27 +1,75 @@
-<div>
-    <h1>Obstacles When You Begin Learning</h1>
-    <div id="Obstacles">
-        <div>How do I start?</div>
-        <div>
-            <ul>
-                <li>Check out this list of ways to get started in various languages! </li>
-                <li>Search the internet for tutorials. If I was learning Python, I would google <strong>Python Tutorial</strong>.</li>
-                <li>Check out my articles on various languages.</li>
-            </ul>
-            <p>If you would like a structured course, please schedule a one-hour lesson with me. I have courses in JavaScript or Python, or you can request for help with something specific.</p>
-        </div>
-        <div>I don't have time! Or would like to learn faster.</div>
-        <div>
+<a href="/courses" style="text-align: center; width: 100%;">Back to Courses</a>
+<div id="ObstaclesScreen">
+
+</div>
+<a href="/courses" style="text-align: center; width: 100%;">Back to Courses</a>
+<script>
+    class Section {
+        constructor(title, id, content) {
+            this.Title = title;
+            this.Id = id;
+            this.Content = content;
+            this.render();
+        }
+
+        render() {
+            this.Element = document.createElement('div');
+            this.Element.innerHTML = `<h3 id="${this.Id}">${this.Title}</h3>${this.Content}`;
+            this.Element.classList.add('Section');
+        }
+    }
+
+    class TableOfContents {
+        constructor(items) {
+            this.Items = items;
+            this.render();
+        }
+
+        render() {
+            this.Element = document.createElement('div');
+            this.Element.innerHTML = `<h2>Table of Contents</h2>${this.Items.map(i => {
+                return `<div><a href="${window.location}#${i.Id}">${i.Title}</a></div>`;
+            }).join('')}`;
+        }
+    }
+
+    sections = [
+        new Section(
+            'How do I start?',
+            'how_do_I_start',
+            `<ul>
+            <li>Check out this list of ways to get started in various languages! </li>
+            <li>Search the internet for tutorials. If I was learning Python, I would google <strong>Python Tutorial</strong>.</li>
+            <li>Check out my articles on various languages.</li>
+        </ul>
+        <p>If you would like a structured course, please schedule a one-hour lesson with me. I have courses in JavaScript or Python, or you can request for help with something specific.</p>
+            `
+        ),
+        new Section(
+            `I don't have time! Or would like to learn faster.`,
+            `time`,
+            `<p>
             Understandable. I've spent years learning various languages. Start with small projects. When I wanted to make big projects at first, it slowed some of my progress. Students I've had which focus on making small projects have the most fun, and have the fastest success. 15 minutes a day is plenty of time, and will give your mind some time to process it!
-        </div>
-        <div>Is it difficult? </div>
-        <div>
-            <ul>
+        </p>`
+        ),
+        new Section(
+            `Is it difficult?`,
+            `difficulty`,
+            `<ul>
                 <li>There is a specific day when it will click for you. Before this day, it may seem intimidating and the code may not make sense. That's okay! This day typically comes within about 1-3 weeks of starting. Just hang in there for that first 1-3 weeks. When that day came for me, it was amazing!</li>
                 <li>Write everything out! I would avoid copy-paste, especially in the beginning, for tutorials you might come across. If you write the code itself, you will notice more patterns! You will begin to see how things are typed out, and work. Students I've had which write it out begin to ask questions they never have before!</li>
                 <li>Some languages are more difficult to learn than others. Some concepts are more difficult to learn than others. Give Python or JavaScript a try! They are a great first language. </li>
                 <li>Your second language is easier. Languages after that are even easier. Eventually, you can understand many things in most languages you've never seen before.</li>
-            </ul>
-        </div>
-    </div>
-</div>
+            </ul>`
+        )
+    ]
+
+    let tableOfContents = new TableOfContents(sections);
+
+    let obstaclesScreen = document.getElementById('ObstaclesScreen');
+    obstaclesScreen.appendChild(tableOfContents.Element);
+    sections.forEach(s => {
+        obstaclesScreen.appendChild(s.Element);
+    })
+
+</script>
