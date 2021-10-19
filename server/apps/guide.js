@@ -1,6 +1,8 @@
-import {Page, RouteNode} from "../routes/route";
-
-export class Guide extends Page {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Guide = void 0;
+const route_1 = require("../routes/route");
+class Guide extends route_1.Page {
     constructor() {
         let guides = [
             ['Welcome', 'Begin your programming journey here!'],
@@ -10,28 +12,27 @@ export class Guide extends Page {
             ['Math', 'How do I perform addition, subtraction, etc.?'],
             ['Comments', 'Can I write text the computer will ignore for my own reference?'],
             //['Console', 'What is a text based program?'],
-        ]
-
+        ];
         super('guide', guides.map((g, index) => {
-            let data = {tutorial: `${g[0].toLowerCase()}.ejs`};
+            let data = { tutorial: `${g[0].toLowerCase()}.ejs` };
             if (index < guides.length - 1) {
                 data['has_next_lesson'] = true;
-                data['next_lesson'] = {url: guides[index + 1][0], name: guides[index + 1][0], desc: guides[index + 1][1]}
-            } else {
+                data['next_lesson'] = { url: guides[index + 1][0], name: guides[index + 1][0], desc: guides[index + 1][1] };
+            }
+            else {
                 data['has_next_lesson'] = false;
             }
-            return new Page(g[0].toLowerCase(), [], `tutorials/base_tutorial.ejs`, g[0], data)
-        }), 'guide.ejs', 'Guides', {tutorials: guides.map(g => {
+            return new route_1.Page(g[0].toLowerCase(), [], `tutorials/base_tutorial.ejs`, g[0], data);
+        }), 'guide.ejs', 'Guides', { tutorials: guides.map(g => {
                 return {
                     url: `/courses/guide/${g[0].toLowerCase()}`,
                     name: g[0],
                     desc: g[1]
-                }
-            })});
+                };
+            }) });
     }
 }
-
-
+exports.Guide = Guide;
 // import {Page} from "./app";
 //
 // class Guide extends Page{
@@ -66,3 +67,4 @@ export class Guide extends Page {
 //     return guide.GetPage();
 // })
 //
+//# sourceMappingURL=guide.js.map

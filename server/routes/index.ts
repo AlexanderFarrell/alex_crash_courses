@@ -1,7 +1,7 @@
 
 import {Application} from "express";
 import {Page, SetupRouteGraph} from "./route";
-import {Guide} from "../server/apps/guide";
+import {Guide} from "../apps/guide";
 
 const graph = new Page('', [
     new Page('Courses', [
