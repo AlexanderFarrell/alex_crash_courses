@@ -4,7 +4,7 @@ var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
-var routes_1 = require("../routes");
+var routes_1 = require("./../routes");
 var server = express();
 var port = 3000;
 // view engine setup
