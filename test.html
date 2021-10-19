@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background: linear-gradient(180deg, #cb0047, #2c000f);
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+        }
+        #g {
+            background: #2c000f;
+            margin: 5%;
+            border-radius: 20px;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            grid-gap: 10px;
+            box-shadow: 1px 1px 5px black;
+        }
+        .Item {
+            padding: 10px;
+            background: #52001c;
+            border-radius: 10px;
+        }
+        .Icon {
+            font-size: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="g" style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr; ">
+
+    </div>
+</body>
+<script>
+    function AddIcon(icon, price) {
+        let d = document.createElement('div');
+        d.classList.add('Item');
+        let i = document.createElement('div');
+        i.classList.add('Icon');
+        i.innerHTML = icon;
+        let a = document.createElement('div');
+        a.classList.add('Desc');
+        a.innerHTML = price;
+
+        d.appendChild(i);
+        d.appendChild(a);
+        document.getElementById('g').appendChild(d);
+    }
+
+    let food = [
+        '🍏',
+        '🍎',
+        '🍐',
+        '🍊',
+        '🍋',
+        '🍌',
+        '🍉',
+        '🍇',
+        '🍓',
+        '🍈',
+        '🍒',
+        '🍑',
+        '🍍',
+        '🥥',
+        '🥝',
+        '🍅',
+        '🍆',
+        '🥑',
+        '🥒',
+        '🥦',
+        '🌶',
+        '🌽',
+        '🥕',
+        '🥔',
+        '🍠',
+        '🥐',
+        '🍞',
+        '🥖',
+        '🥨',
+        '🧀',
+        '🥚',
+        '🍳',
+        '🥞',
+        '🥓',
+        '🥩',
+        '🍗',
+        '🍖',
+        '🌭',
+        '🍔',
+        '🍟',
+        '🍕',
+        '🥪',
+        '🥙',
+        '🌮',
+        '🌯',
+        '🥗',
+        '🥘',
+        '🥫',
+        '🍝',
+        '🍜',
+        '🍮',
+        '🍭',
+        '🍬',
+        '🍫',
+        '🍿',
+        '🍩',
+        '🍪',
+        '🌰',
+        '🥜',
+        '🍯',
+        '🥛',
+        '🍼',
+        '☕️',
+        '🍵',
+        '🍲',
+        '🍛',
+        '🍣',
+        '🍱',
+        '🥟',
+        '🍤',
+        '🍙',
+        '🍚',
+        '🍘',
+        '🍥',
+        '🥠',
+        '🍢',
+        '🍡',
+        '🍧',
+        '🍨',
+        '🍦',
+        '🥧',
+        '🍰',
+        '🎂',
+        '🥤',
+        '🥡',
+    ];
+
+    for (let i = 0; i < 25; i++) {
+        AddIcon(food[parseInt(Math.floor(Math.random() * food.length))], `$${(Math.random() * Math.random() * 5).toFixed(2)}`)
+    }
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
