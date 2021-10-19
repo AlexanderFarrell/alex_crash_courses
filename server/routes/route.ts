@@ -26,7 +26,7 @@ export class Page extends RouteNode {
 
     constructor(id: string, SubNodes: RouteNode[] = [], fileName: string = `${id.toLowerCase()}.ejs`, title: string = id, data={}) {
         super(id.toLowerCase(), ((req, res) => {
-            data['title'] = title
+            data['title'] = title + ' - Alexander Farrell';
             data['content'] = fileName;
             res.render('template', data);
         }), SubNodes);

@@ -17,7 +17,9 @@ const graph = new route_1.Page('', [
         new route_1.Page("Ordered_Energy"),
         new route_1.Page("Raise_Triton"),
         new route_1.Page("Buried_Peace"),
-        new route_1.Page("Void Money")
+        new route_1.Page("Void Money"),
+        new route_1.Page("Space"),
+        new route_1.Page("Fractals")
     ]),
     new route_1.Page("About"),
     new route_1.Page("Privacy"),

@@ -17,7 +17,9 @@ const graph = new Page('', [
         new Page("Ordered_Energy"),
         new Page("Raise_Triton"),
         new Page("Buried_Peace"),
-        new Page("Void Money")
+        new Page("Void Money"),
+        new Page("Space"),
+        new Page("Fractals")
     ]),
     new Page("About"),
     new Page("Privacy"),
