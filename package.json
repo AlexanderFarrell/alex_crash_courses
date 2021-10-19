@@ -4,7 +4,7 @@
   "private": true,
   "main": "./node server/server.js",
   "scripts": {
-    "start": "node server/server.js"
+    "start": "node ./server/server.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
