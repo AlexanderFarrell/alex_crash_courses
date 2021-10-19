@@ -4,7 +4,7 @@ var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
-var routes_1 = require("./../routes");
+var index_1 = require("../routes/index");
 var server = express();
 var port = 3000;
 // view engine setup
@@ -15,7 +15,7 @@ server.use(express.json());
 server.use(express.urlencoded({ extended: false }));
 server.use(cookieParser());
 server.use(express.static(path.join(__dirname, '../public')));
-(0, routes_1.SetupIndexApi)(server);
+(0, index_1.SetupIndexApi)(server);
 server.use(function (req, res, next) {
     res.render('template', { title: 'Not Found' + " - Alexander Farrell", content: 'pages/not_found.ejs' });
 });

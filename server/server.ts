@@ -2,7 +2,7 @@ import * as express from 'express';
 import * as path from "path";
 import * as cookieParser from "cookie-parser";
 import * as logger from 'morgan';
-import {SetupIndexApi} from "./../routes";
+import {SetupIndexApi} from "../routes/index";
 
 const server = express();
 
