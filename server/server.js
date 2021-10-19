@@ -6,7 +6,7 @@ const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const routes_1 = require("./routes");
 const server = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 // view engine setup
 server.set('views', path.join(__dirname, '../views'));
 server.set('view engine', 'ejs');
