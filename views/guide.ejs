@@ -1,0 +1,16 @@
+<h1>Tutorials</h1>
+<p>Below is a list of free tutorials you can use!</p>
+<p>Tutorials are currently under construction as we take much of the course material and put it online. More tutorials to be added soon!</p>
+<p>My goal is to help make it easier to learn how to program. If you would like some help over Zoom, please schedule a <a href="/courses">crash course</a>.</p>
+<div style="display: grid; grid-template-columns: 1fr; grid-column-gap: 20px;"></div>
+<% for (var i = 0; i < tutorials.length; i++) {%>
+    <div style="margin-bottom: 1.5em">
+        <a href="<%= tutorials[i].url %>">
+            <div class="Scream">
+                <h4><%= tutorials[i].name%></h4>
+                <p><%= tutorials[i].desc%></p>
+            </div>
+        </a>
+    </div>
+
+<%}%>

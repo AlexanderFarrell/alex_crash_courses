@@ -1,0 +1,26 @@
+<style>
+</style>
+<a href="/courses/guide">Back to Tutorials</a>
+<div class="tutorial">
+    <%- include(tutorial) %>
+</div>
+<hr>
+<p>If you would like some help, please schedule a <a href="/courses">crash course</a>.</p>
+<br>
+<% if (has_next_lesson) {%>
+    <p>Next Lesson: </p>
+    <a href="<%= next_lesson.url%>">
+        <div class="Scream" style="place-self: center; text-align: center">
+            <h3><%= next_lesson.name%></h3>
+            <p><%= next_lesson.desc%></p>
+        </div>
+    </a>
+<% }%>
+<br>
+<a style="text-align: center" href="/courses/guide">Back to Tutorials</a>
+<hr>
+
+<script>
+    document.getElementById('Background').style.background = 'Black';
+    document.getElementById("Background").style.backgroundImage = 'none';
+</script>

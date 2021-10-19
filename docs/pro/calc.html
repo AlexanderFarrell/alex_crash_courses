@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+    <div id="Display">
+
+    </div>
+    <div id="NumberContainer">
+
+    </div>
+    <div id="SymbolContainer">
+
+    </div>
+</body>
+<script>
+    const operations = [
+        {
+            symbol: '+',
+            operation: Add
+        },
+        {
+            symbol: '-',
+            operation: Subtract
+        },
+        {
+            symbol: '*',
+            operation: Multiply
+        },
+        {
+            symbol: '/',
+            operation: Divide
+        },
+        {
+            symbol: '=',
+            operation: Calculate
+        },
+        {
+            symbol: 'Clear',
+            operation: Clear
+        },
+        {
+            symbol: 'Backspace',
+            operation: Clear
+        },
+        {
+            symbol: '.',
+            operation: () => {SetUpButton('.')}
+        }
+    ];
+
+    const display = document.getElementById('Display');
+    const numbers = document.getElementById('NumberContainer');
+    const symbols = document.getElementById('SymbolContainer');
+
+    let previousNumber = 0;
+    let currentOperation = () => {};
+
+    //Set up numbers
+    for (let i = 0; i < 10; i++) {
+        SetUpButton(i);
+    }
+
+    //Set up symbols
+    operations.forEach(operation => {
+        let button = document.createElement('button');
+        button.innerHTML = operation.operation;
+        button.addEventListener('click', (event) => {
+            currentOperation = operation.operation;
+        });
+    });
+
+    function SetUpButton(character) {
+        let button = document.createElement('button');
+        button.innerHTML = character;
+        button.addEventListener('click', (event) => {
+            display.innerHTML += character;
+        });
+    }
+
+    function GetDisplayNumber() {
+        return parseFloat(display.value);
+    }
+
+    function Add() {
+
+    }
+
+    function Subtract() {
+
+    }
+
+    function Multiply() {
+
+    }
+
+    function Divide() {
+
+    }
+
+    function Calculate() {
+
+    }
+
+    function Clear() {
+        currentOperation = 'none';
+        previousNumber = 0;
+    }
+
+    function Backspace() {
+
+    }
+
+    function SetOperation(operation) {
+        currentOperation = () => {};
+    }
+</script>
+</html>
