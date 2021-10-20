@@ -3,7 +3,7 @@ import * as path from "path";
 import * as cookieParser from "cookie-parser";
 import * as logger from 'morgan';
 import {SetupIndexApi} from "./routes";
-const sslRedirect = require('heroku-ssl-redirect');
+import sslRedirect from "heroku-ssl-redirect";
 
 const server = express();
 

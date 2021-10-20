@@ -5,7 +5,7 @@ const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const routes_1 = require("./routes");
-const sslRedirect = require('heroku-ssl-redirect');
+const heroku_ssl_redirect_1 = require("heroku-ssl-redirect");
 const server = express();
 const port = process.env.PORT || 3000;
 // view engine setup
@@ -28,7 +28,7 @@ server.use(express.static(path.join(__dirname, '../public')));
 server.use((req, res, next) => {
     res.render('template', { title: 'Not Found' + " - Alexander Farrell", content: 'pages/not_found.ejs' });
 });
-server.use(sslRedirect());
+server.use((0, heroku_ssl_redirect_1.default)());
 server.listen(port, () => {
     console.log(`Listening on ${port}`);
     console.log(`View at localhost:${port} if local.`);
