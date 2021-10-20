@@ -20,7 +20,7 @@ server.use(express.static(path.join(__dirname, '../public')));
 
 SetupIndexApi(server);
 
-if(process.env.PORT) {
+if (port != 3000) {
     server.use((req, res, next) => {
         if (req.header('x-forwarded-proto') !== 'https')
             res.redirect(`https://${req.header('host')}${req.url}`)
