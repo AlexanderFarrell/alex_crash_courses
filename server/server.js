@@ -16,6 +16,14 @@ server.use(express.urlencoded({ extended: false }));
 server.use(cookieParser());
 server.use(express.static(path.join(__dirname, '../public')));
 (0, routes_1.SetupIndexApi)(server);
+if (process.env.NODE_ENV === 'production') {
+    server.use((req, res, next) => {
+        if (req.header('x-forwarded-proto') !== 'https')
+            res.redirect(`https://${req.header('host')}${req.url}`);
+        else
+            next();
+    });
+}
 server.use((req, res, next) => {
     res.render('template', { title: 'Not Found' + " - Alexander Farrell", content: 'pages/not_found.ejs' });
 });

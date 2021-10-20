@@ -23,10 +23,14 @@
         <span>Home</span>
       </a>
       <div>&nbsp;</div>
-      <a class="NavButton" href="/courses">Courses</a>
-<!--      <a class="NavButton" href="/articles">Articles</a>-->
-      <a class="NavButton" href="/work">Work</a>
-      <a class="NavButton" href="/about">About</a>
+      <div style="display: flex">
+        <a class="NavButton" href="/courses">Courses</a>
+        <a class="NavButton" href="/courses/guide">Tutorials</a>
+        <!--      <a class="NavButton" href="/articles">Articles</a>-->
+        <a class="NavButton" href="/work">Work</a>
+        <a class="NavButton" href="/about">About</a>
+      </div>
+
     </header>
     <div id="Content">
       <%- include(content) %>

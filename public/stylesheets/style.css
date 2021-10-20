@@ -26,6 +26,41 @@ li {
     padding-bottom: 0.5em;
 }
 
+img {
+    object-fit: contain;
+    max-width: 100%;
+
+}
+
+h1, h2, h3, h4, h5 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+p {
+    line-height: 1.8em;
+}
+
+code {
+    line-height: 1em;
+}
+
+header {
+    width: 100%;
+    display: grid;
+    margin: 0;
+    grid-template-columns: auto 1fr auto;
+}
+
+footer {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+}
+
 #Main {
     display: grid;
     grid-template-rows: auto 1fr auto;
@@ -57,10 +92,6 @@ li {
     height: 67vh;
 }
 
-code {
-    line-height: 1em;
-}
-
 .tutorial>p {
     padding-top: 2em;
     padding-bottom: 2em;
@@ -78,13 +109,6 @@ code {
     z-index: -1;
 }
 
-header {
-    width: 100%;
-    display: grid;
-    margin: 0;
-    grid-template-columns: auto 1fr auto /*auto*/ auto auto;
-}
-
 #Home {
     padding: 15px;
     display: grid;
@@ -95,16 +119,6 @@ header {
     grid-template-areas:
             "a a a"
             "b c d";
-}
-
-img {
-    object-fit: contain;
-    max-width: 100%;
-
-}
-
-p {
-    line-height: 1.8em;
 }
 
 .PictureButton {
@@ -144,12 +158,6 @@ p {
     padding: 10px;
 }
 
-footer {
-    width: 100%;
-    margin: 0;
-    text-align: center;
-}
-
 #courses {
     margin: 0;
     padding: 0;
@@ -181,13 +189,6 @@ footer {
     margin: 0;
     padding: 0;
 }*/
-h1, h2, h3, h4, h5 {
-    text-align: center;
-}
-
-h1 {
-    font-size: 3em;
-}
 
 #Content {
     width: 95%;
