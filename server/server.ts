@@ -3,8 +3,9 @@ import * as path from "path";
 import * as cookieParser from "cookie-parser";
 import * as logger from 'morgan';
 import {SetupIndexApi} from "./routes";
-import sslRedirect from "heroku-ssl-redirect";
+// import sslRedirect from "heroku-ssl-redirect";
 import * as helmet from 'helmet';
+import * as enforce from 'express-sslify';
 
 const server = express();
 
@@ -20,6 +21,7 @@ server.use(express.urlencoded({ extended: false }));
 server.use(cookieParser());
 server.use(express.static(path.join(__dirname, '../public')));
 server.use(helmet())
+server.use(enforce.HTTPS({trustProtoHeader: true;}))
 
 SetupIndexApi(server);
 
@@ -36,7 +38,7 @@ server.use((req, res, next) => {
     res.render('template', { title: 'Not Found' + " - Alexander Farrell", content: 'pages/not_found.ejs'})
 })
 
-server.use(sslRedirect());
+// server.use(sslRedirect());
 
 server.listen(port, () => {
     console.log(`Listening on ${port}`);
