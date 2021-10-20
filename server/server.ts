@@ -4,6 +4,7 @@ import * as cookieParser from "cookie-parser";
 import * as logger from 'morgan';
 import {SetupIndexApi} from "./routes";
 import sslRedirect from "heroku-ssl-redirect";
+import * as helmet from 'helmet';
 
 const server = express();
 
@@ -18,6 +19,7 @@ server.use(express.json());
 server.use(express.urlencoded({ extended: false }));
 server.use(cookieParser());
 server.use(express.static(path.join(__dirname, '../public')));
+server.use(helmet())
 
 SetupIndexApi(server);
 

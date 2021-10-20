@@ -6,6 +6,7 @@ const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const routes_1 = require("./routes");
 const heroku_ssl_redirect_1 = require("heroku-ssl-redirect");
+const helmet = require("helmet");
 const server = express();
 const port = process.env.PORT || 3000;
 // view engine setup
@@ -16,6 +17,7 @@ server.use(express.json());
 server.use(express.urlencoded({ extended: false }));
 server.use(cookieParser());
 server.use(express.static(path.join(__dirname, '../public')));
+server.use(helmet());
 (0, routes_1.SetupIndexApi)(server);
 // if (port != 3000) {
 //     server.use((req, res, next) => {
