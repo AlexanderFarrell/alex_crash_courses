@@ -1,0 +1,378 @@
+<style>
+    /*img {*/
+    /*    min-height: 100%;*/
+    /*}*/
+    img {
+        border-radius: 10px;
+    }
+
+    .ContactButton {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        place-items: center;
+        padding: 4px;
+        /*width: 80%;*/
+        background-position: -25px 0;
+        box-shadow: 1px 1px 5px black;
+        border-radius: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        color: white;
+        /*text-shadow: 1px 1px 3px black;*/
+    }
+    .ContactButton > h3 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    p {
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+    }
+    .CourseIcon {
+        padding-left: 20%;
+        padding-right: 20%;
+        width: 3rem;
+        height: 3rem;
+        object-fit: contain;
+    }
+    .CourseButton {
+        color: white;
+        backdrop-filter: blur(8px) brightness(300%) hue-rotate(90deg);
+        box-shadow: 1px 1px 5px black;
+        border-radius: 10px;
+        font-size: min(2.7vw, 2.7vh);
+        justify-content: center;
+        justify-items: center;
+        padding: 10%;
+    }
+    .Benefit {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr;
+        grid-gap: 5%;
+        padding-bottom: 2rem;
+    }
+    .BenefitR {
+    }
+    .BenefitL {
+        direction: rtl;
+    }
+
+    .BenefitImage {
+        object-fit: cover;
+        border-radius: 10px;
+        direction: ltr;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        direction: ltr;
+        padding-bottom: 30px;
+    }
+    .BenefitImage > img {
+        box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.4);
+    }
+    .BenefitTitle {
+        font-size: 1.5rem;
+        direction: ltr;
+        min-width: 0;
+        min-height: 0;
+        box-sizing: border-box;
+    }
+    .BenefitText {
+        font-size: 1.25rem;
+        direction: ltr;
+        box-sizing: border-box;
+    }
+    .BenefitDescription {
+        direction: ltr;
+        font-size: 1rem;
+        min-width: 0;
+        min-height: 0;
+        box-sizing: border-box;
+    }
+    .SmallIcon {
+        font-size: 40px;
+    }
+    #MainItem {
+        display: grid;
+        padding: 7vh 0 14vh 0;
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+        place-content: center;
+        direction: rtl;
+        grid-auto-flow: dense;
+    }
+    #MainItemTitle {
+        /*font-family: "Space Mono", monospace;*/
+        font-size: 2.7rem;
+    }
+    #MainItemInfo {
+        display: grid;
+        place-items: center;
+        place-content: space-between;
+        grid-gap: 2rem;
+        direction: ltr;
+    }
+    #MainItemLogo {
+        display: grid;
+        padding: 12%;
+        grid-column: 1;
+        grid-row: 1;
+    }
+    #MainItemDetails {
+        font-size: 1rem;
+    }
+    .accent {
+        color: #b3c5ff
+    }
+    @media only screen and (max-width: 800px) {
+        #MainItem {
+            grid-template-columns: 1fr;
+            width: 100%;
+            padding: 2vh 5% 10vh 5%;
+            transition: 0.2s;
+        }
+        #MainItemInfo {
+            padding: 0;
+        }
+        #MainItemLogo {
+            padding: 10% 20%;
+        }
+        #MainItemDetails {
+            font-size: 1rem;
+        }
+        .Benefit {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto auto;
+            grid-gap: 0;
+            padding-bottom: 3rem;
+        }
+        .BenefitImage {
+            min-width: 100%;
+            min-height: 100%;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+        .BenefitTitle {
+            grid-row: 1;
+        }
+        .BenefitText {
+            grid-row: 3;
+        }
+        .BenefitDescription {
+
+        }
+    }
+    @media
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+        .CourseButton {
+            font-size: min(3.5vw, 3.5vh);
+        }
+    }
+    /*@media*/
+    /*(-webkit-min-device-pixel-ratio: 2),*/
+    /*(min-resolution: 192dpi) {*/
+    /*    #MainItem {*/
+    /*        grid-template-columns: 1fr;*/
+    /*        width: 90%;*/
+    /*        transition: 0.2s;*/
+    /*        padding: 0;*/
+    /*    }*/
+    /*    #MainItemInfo {*/
+    /*        width: 70%;*/
+    /*        font-size: small;*/
+    /*        padding: 0;*/
+    /*    }*/
+    /*    #MainItemLogo {*/
+    /*        padding: 10%;*/
+    /*    }*/
+    /*    #MainItemDetails {*/
+    /*        font-size: 1rem;*/
+    /*    }*/
+    /*}*/
+
+</style>
+
+<div style="padding: 0 0">
+    <div id="MainItem">
+        <div id="MainItemInfo">
+            <div>
+                <h1 id="MainItemTitle">Learn to <span class="accent" style="grid-column: 2">Code</span></h1>
+            </div>
+            <div id="MainItemDetails">Offering one-on-one programming courses for $25 an hour. Conquer several languages. Build apps, games and websites. </div>
+            <a style="width: 100%; text-align: center" class="Scream" href="courses#start">
+                Schedule
+            </a>
+        </div>
+        <div id="MainItemLogo">
+            <img src="wqdf.png">
+            <!--                <h2>One-on-One</h2><h4>Crash Courses</h4>-->
+        </div>
+    </div>
+<!--    <div style="padding: 0 0">-->
+
+<!--        <p>My name is Alexander Farrell, and I offer convenient and effective crash courses in programming over Zoom. </p>-->
+<!--        <p>I would love to help you build Apps, Games, and Websites! Please contact me, or schedule conveniently online to begin or continue learning. </p>-->
+<!--    </div>-->
+
+
+<!--    <div class="TwoColumn" style="justify-items: center; justify-content: center;">-->
+<!--        <div>-->
+<!--            <a href="tel:949-750-6480">-->
+<!--                <div class="Icon" style="text-align: center">📱</div>-->
+<!--            </a>-->
+<!--            <a href="courses/one_hour">-->
+<!--            </a>-->
+<!--            <a href="mailto: courses@alexanderfarrell.com">-->
+<!--            </a>-->
+<!--            <a href="courses/two_hour">-->
+<!--            </a>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--        </div>-->
+<!--    </div>-->
+    <div class="StretchWidth" style="background: hsl(230,38%,36%)">
+        <div class="ContentItem" style="padding-top: 1rem">
+            <div class="Benefit BenefitR">
+                <h3 class="BenefitTitle">Learn How to Build Apps, Games and Websites</h3>
+                <div class="BenefitImage">
+                    <img src="images/auth.png">
+                </div>
+                <div class="BenefitDescription">My students build applications, games and websites during our courses with the knowledge they learn. I will guide them in planning, creating, testing and even deploying/publishing their projects. </div>
+            </div>
+            <div class="Benefit BenefitR">
+                <h3 class="BenefitTitle">Learn & Use Several Languages</h3>
+                <div class="BenefitImage">
+                    <img src="images/code.png">
+                </div>
+                <div class="BenefitDescription">My students learn several languages such as Python, JavaScript, HTML, CSS, SQL, JSON, C#, GLSL and more during their courses. We will explore derivative languages such as SCSS and TypeScript. </div>
+            </div>
+            <div class="Benefit BenefitR">
+                <h3 class="BenefitTitle">Enjoy One-on-One Help</h3>
+                <div class="BenefitImage">
+                    <img src="images/food.png">
+                </div>
+                <div class="BenefitDescription">My students can ask questions, and I adapt the courses to them. I believe in my students, and want to see their brilliant talents flourish. </div>
+            </div>
+            <div class="Benefit BenefitR">
+                <h3 class="BenefitTitle">Learn & Use Several Technologies</h3>
+                <div class="BenefitImage">
+                    <img src="images/pack.png">
+                </div>
+                <div class="BenefitDescription">My students learn several technologies such as Databases, Web Browsers, Servers, Version Control, Shaders, NPM, NodeJS, Unity and more during their courses.        </div>
+            </div>
+        </div>
+    </div>
+
+<!--    <br>-->
+<!--    <br>-->
+<!--    <h3>Learn & Use Several Languages</h3>-->
+<!--    <p>My students learn several languages such as Python, JavaScript, HTML, CSS, SQL, JSON, C#, GLSL and more during their courses. We will explore derivative languages such as SCSS and TypeScript. </p>-->
+<!--    <img width="100%" style="border-radius: 20px;" src="images/code.png">-->
+<!--    <br>-->
+<!--    <br>-->
+<!--    <h3>Get One-on-One Help</h3>-->
+<!--    <p>My students can ask questions, and I adapt the courses to them. I believe in my students, and want to see their brilliant talents flourish. </p>-->
+<!--    <img width="100%" style="border-radius: 20px;" src="images/food.png">-->
+<!--    <br>-->
+<!--    <br>-->
+<!--    <h3>Learn & Use Several Technologies</h3>-->
+<!--    <p>My students learn several technologies such as Databases, Web Browsers, Servers, Version Control, Shaders, NPM, NodeJS, Unity and more during their courses. </p>-->
+<!--    <img width="100%" style="border-radius: 20px;" src="images/pack.png">-->
+<!--    <br>-->
+<!--    <br>-->
+    <div id="start" style="height: 70px !important;">&nbsp;</div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr">
+        <div>
+            <h1>Let's Get <span class="accent" >Started</span></h1>
+            <h2>With Your First Course</h2>
+            <img style="padding: 10%" src="wqdf.png">
+        </div>
+        <div>
+            <a href="tel:714-794-5693" class="ContactButton Scream">
+                <div style="text-align: center" class="SmallIcon">📱</div>
+                <div style="text-align: center; font-size: 1rem">
+                    <h3>Call</h3>
+                    <div>(714) 794-5693</div>
+                </div>
+            </a>
+            <a href="mailto: courses@alexanderfarrell.com" class="ContactButton Scream">
+                <div style="text-align: center" class="SmallIcon">✉️</div>
+                <div style="text-align: center; font-size: 0.8rem">
+                    <h3>Email</h3>
+                    <div>courses@alexanderfarrell.com</div>
+                </div>
+            </a>
+            <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/alexander-crash-courses/1-hour-lesson?background_color=000827&text_color=ffffff&primary_color=ac0053'}); return false" class="ContactButton Scream">
+                <div style="text-align: center" class="SmallIcon">🕐</div>
+                <div style="text-align: center; font-size: 1rem">
+                    <h3>Pre-Book Online</h3>
+                    <div>One Hour Course</div>
+                </div>
+            </a>
+<!--            <a href="mailto: courses@alexanderfarrell.com" class="ContactButton Scream">-->
+<!--                <div style="text-align: center" class="SmallIcon">✉️</div>-->
+<!--                <div style="text-align: center">courses@alexanderfarrell.com</div>-->
+<!--            </a>-->
+        </div>
+
+
+    </div>
+    <div>
+    </div>
+    <div>
+
+    </div>
+    <h3>Schedule</h3>
+
+
+
+    <div> <!--style="/*display: grid; place-content: space-between; grid-column-gap: 20px;  !*width: 80%;*! margin-left: auto; margin-right: auto*/"-->
+        <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/alexander-crash-courses/1-hour-lesson?background_color=000827&text_color=ffffff&primary_color=ac0053'});return false;" class="">
+            <!--            <div style="text-align: center" class="Icon">🕐</div>-->
+
+            <img class="CourseIcon" src="wqdf.png">
+            <div style="text-align: center">One Hour Course</div>
+            <div style="text-align: center"> $25</div>
+        </a>
+<!--        <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/alexander-crash-courses/2-hour-lesson?background_color=000827&text_color=ffffff&primary_color=ac0053'});return false;" class="Scream">-->
+<!--            <div>-->
+<!--                <img class="CourseIcon" src="wqdf.png">-->
+<!--            </div>-->
+<!--            &lt;!&ndash;            <div style="text-align: center;" class="Icon">🕑</div>&ndash;&gt;-->
+<!--            <div style="text-align: center">Two Hour Course</div>-->
+<!--            <div style="text-align: center">$45</div>-->
+<!--        </a>-->
+    </div>
+    <div id="Extra">
+        <a href="/courses/prepare" class="Button">
+            <h2>Prepare</h2>
+            <p>What obstacles may someone encounter while learning?</p>
+        </a>
+<!--        <a href="/courses/languages" class="Scream">-->
+<!--            <h2>Pick a Language</h2>-->
+<!--            <p>How does one get started on their own?</p>-->
+<!--        </a>-->
+<!--        <a href="/courses/ideas" class="Scream">-->
+<!--            <h2>Project Ideas</h2>-->
+<!--            <p>Do you have ideas for someone's next apps, website or game?</p>-->
+<!--        </a>-->
+<!--        <a href="/courses/curriculum" class="Scream">-->
+<!--            <h2>Explore Curriculum</h2>-->
+<!--            <p>What specifically do the courses teach?</p>-->
+<!--        </a>-->
+        <a href="/courses/guide" class="Button">
+            <h2>Tutorials</h2>
+            <p>Do you have tutorials online? </p>
+        </a>
+<!--        <a href="/courses/philosophy" class="Scream">-->
+<!--            <h2>Philosophy</h2>-->
+<!--            <p>How do you teach? </p>-->
+<!--        </a>-->
+    </div>
+
+</div>

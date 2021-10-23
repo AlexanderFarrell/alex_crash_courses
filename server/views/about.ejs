@@ -1,5 +1,6 @@
 <style>
     #AboutMain {
+        padding-top: 3em;
         display: grid;
         grid-row-gap: 3em;
     }
@@ -10,30 +11,32 @@
     }
     .ContactItem {
         display: grid;
-        grid-template-columns: auto 1fr;
+        grid-template-columns: 200px 1fr;
         width: 100%;
-        justify-items: center;
-        align-items: center;
-        text-align: center;
+        place-content: center;
+        place-items: center;
+        padding: 0 10%;
     }
     .Category {
         border-radius: 10px;
+    }
+    .Pad {
+        padding: 1%;
     }
 </style>
 <div id="AboutMain">
     <div class="Category">
         <div id="About">
-            <div class="Scream">
-                <img class="Concept" src="images/alex.jpg" style="width: 100%; object-fit: contain;">
-                <h2 style="padding-top: 0.8em">Alexander Farrell</h2>
-                <a style="font-size: 10px" href="mailto: info@alexanderfarrell.com" class="ContactItem">
-                    <div style="font-size: 30px">✉️</div><div>info@alexanderfarrell.com</div>
-                </a>
+            <div style="overflow: hidden">
+                <img src="images/alex.jpg" style="border-radius: 10px; width: 100%; object-fit: contain; place-items: center; justify-content: center">
+<!--                <a href="mailto: info@alexanderfarrell.com" class="ContactItem">-->
+<!--                    info@alexanderfarrell.com-->
+<!--                </a>-->
             </div>
-            <div>
-                <h3>About</h3>
-                <p>Hello, my name is Alexander Farrell. My goal is to help people develop talents through lessons, articles and games. </p>
-                <p>The purpose of this website is to provide lessons, articles and games which do this. Below are statistics I will keep to measure overtime and to stay accountable to the world in accomplishing this goal.</p>
+            <div class="Pad">
+                <h3 style="padding-top: 0.8em">Alexander Farrell</h3>
+                <p>Hello, my name is Alexander Farrell. I help people develop talents through lessons, articles and games. </p>
+<!--                <p>The purpose of this website is to provide lessons, articles and games which do this. Below are statistics I will keep to measure overtime and to stay accountable to the world in accomplishing this goal.</p>-->
                 <p>Thank you for visiting my site, and I hope I can provide value to you.</p>
             </div>
         </div>
@@ -51,6 +54,7 @@
         </div>
     </div>
 </div>
+<br>
 
 
 

@@ -1,0 +1,23 @@
+<div id="Classes">
+    <% for (var i = 0; i < units.length; i++) {%>
+        <div data-unit_name="<%= units[i].title%>">
+            <div>
+                <h2>
+                    <%= units[i].title%>
+                </h2>
+                <p>
+                    <%= units[i].description%>
+                </p>
+            </div>
+<!--            <a href="/courses/guide/lessons/<%= units[i].title%>">-->
+<!--                -->
+<!--            </a>-->
+        </div>
+    <%}%>
+</div>
+
+<script src="/guide_client.js">
+</script>
+<script>
+    AddItems('unit_name', GetLessons);
+</script>

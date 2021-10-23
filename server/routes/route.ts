@@ -1,5 +1,61 @@
 import {Application} from "express/ts4.0";
 
+export async function TryRoute(res, on_error_message, f) {
+    try {
+        res.json(await f());
+    } catch (e) {
+        res.status(500).json({message: on_error_message});
+    }
+}
+
+export async function TryDataRoute(res, on_error_message, f) {
+    try {
+        let data = await f();
+        if (data.length > 0) {
+            res.json(data);
+        } else {
+            res.sendStatus(404);
+        }
+        res.json(await f());
+    } catch (e) {
+        res.status(500).json({message: on_error_message});
+    }
+}
+
+export function TryRenderRoute(app, url, params, on_error, content, f, title_f) {
+    app.get(url, async (req, res) => {
+        try {
+            let parameters = params.map(p => {return req.params[p]})
+            let data = await f(...parameters);
+            if (data.length > 0) {
+                let title = title_f(...parameters);
+                RenderPage(res, title, content, data);
+            } else {
+                res.sendStatus(404);
+            }
+            res.json(await f());
+        } catch (e) {
+            res.status(500).json({message: on_error});
+        }
+    })
+}
+
+export function TryAppDataRoute(app, url, params, on_error_message, f) {
+    app.get(url, async (req, res) => {
+        try {
+            let data = await f(...(params.map(p => {return req.params[p]})));
+            if (data.length > 0) {
+                res.json(data);
+            } else {
+                res.sendStatus(404);
+            }
+            res.json(await f());
+        } catch (e) {
+            res.status(500).json({message: on_error_message});
+        }
+    })
+}
+
 export class RouteNode {
     public Id: string;
     public On: (req, res) => void;
@@ -19,6 +75,12 @@ export class RouteNode {
             n.Setup(app, (route == '/') ? '' : route);
         })
     }
+}
+
+export function RenderPage(res, title: string, page: string, data) {
+    data['title'] = title + ' - Alexander Farrell';
+    data['content'] = page;
+    res.render('template', data)
 }
 
 export class Page extends RouteNode {

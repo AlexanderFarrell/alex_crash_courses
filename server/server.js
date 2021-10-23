@@ -5,30 +5,36 @@ const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const routes_1 = require("./routes");
-// import sslRedirect from "heroku-ssl-redirect";
+const fs = require("fs");
+const database_1 = require("./apps/database");
 const helmet = require("helmet");
 const enforce = require("express-sslify");
 const server = express();
 const port = process.env.PORT || 3000;
+const runtime_mode = process.env.RUNTIME_MODE || 'development';
+// @ts-ignore
+const config = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'server.config.json')));
 // view engine setup
-server.set('views', path.join(__dirname, '../views'));
+server.set('views', path.join(__dirname, 'views'));
 server.set('view engine', 'ejs');
 server.use(logger('dev'));
 server.use(express.json());
 server.use(express.urlencoded({ extended: false }));
 server.use(cookieParser());
 server.use(express.static(path.join(__dirname, '../public')));
-server.use(helmet());
-server.use(enforce.HTTPS({ trustProtoHeader: true }));
+switch (runtime_mode) {
+    case 'production':
+        server.use(enforce.HTTPS({ trustProtoHeader: true }));
+        server.use(helmet());
+        (0, database_1.SetupDatabaseProduction)();
+        break;
+    case 'development':
+        (0, database_1.SetupDatabaseDevelopment)(config);
+        break;
+    default:
+        break;
+}
 (0, routes_1.SetupIndexApi)(server);
-// if (port != 3000) {
-//     server.use((req, res, next) => {
-//         if (req.header('x-forwarded-proto') !== 'https')
-//             res.redirect(`https://${req.header('host')}${req.url}`)
-//         else
-//             next()
-//     })
-// }
 server.use((req, res, next) => {
     res.render('template', { title: 'Not Found' + " - Alexander Farrell", content: 'pages/not_found.ejs' });
 });

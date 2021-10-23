@@ -8,14 +8,14 @@
 //
 // add_route(router, '/', 'Tutorials', 'tutorials/tutorials');
 //
-// let guides = [
+// let guide = [
 //     'Comments',
 //     'Console',
 //     'Math',
 //     'Variables'
 // ];
 //
-// guides.forEach(g => {
+// guide.forEach(g => {
 //     add_guide(g);
 // })
 //
