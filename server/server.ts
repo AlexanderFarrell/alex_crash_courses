@@ -36,7 +36,7 @@ switch (runtime_mode) {
             }
         }));
         server.use(helmet.hidePoweredBy());
-        server.use(helmet.hpkp());
+        // server.use(helmet.hpkp());
         server.use(helmet.hsts());
         server.use(helmet.ieNoOpen());
         server.use(helmet.noCache());
