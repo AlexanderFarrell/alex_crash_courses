@@ -29,6 +29,7 @@ switch (runtime_mode) {
                 defaultSrc: ["'self'", 'calendly.com'],
                 scriptSrc: ["'self'"],
                 scriptSrcElem: ["'self'", 'calendly.com'],
+                styleSrcElem: ["'self'"],
                 styleSrc: ["'self'"],
                 imgSrc: ["'self'", 'itch.io'],
                 reportUri: '/report-violation'
