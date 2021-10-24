@@ -14,7 +14,8 @@ export function SetupDatabaseDevelopment(config) {
 
 export function SetupDatabaseProduction() {
     Data = new Database(
-        process.env.DATABASE_URL
+        process.env.DATABASE_URL,
+        false
     )
 }
 

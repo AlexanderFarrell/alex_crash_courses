@@ -17,7 +17,7 @@ function SetupDatabaseDevelopment(config) {
 }
 exports.SetupDatabaseDevelopment = SetupDatabaseDevelopment;
 function SetupDatabaseProduction() {
-    exports.Data = new Database(process.env.DATABASE_URL);
+    exports.Data = new Database(process.env.DATABASE_URL, false);
 }
 exports.SetupDatabaseProduction = SetupDatabaseProduction;
 class Database {
