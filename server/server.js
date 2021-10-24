@@ -26,7 +26,7 @@ switch (runtime_mode) {
         // server.use(helmet())
         server.use(helmet.contentSecurityPolicy({
             directives: {
-                defaultSrc: ["'self'", 'unsafe-inline', 'calendly.com'],
+                defaultSrc: ["'self'", 'calendly.com'],
                 scriptSrc: ["'self'"],
                 scriptSrcElem: ["'self'", 'calendly.com'],
                 styleSrc: ["'self'"],

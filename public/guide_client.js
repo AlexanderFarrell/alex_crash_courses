@@ -44,3 +44,4 @@ async function AddItems(data_attr_name, source_f) {
     }
 }
 
+AddItems('unit_name', GetLessons);
