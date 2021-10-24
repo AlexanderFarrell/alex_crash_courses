@@ -26,24 +26,25 @@ server.use(express.static(path.join(__dirname, '../public')));
 switch (runtime_mode) {
     case 'production':
         server.use(enforce.HTTPS({trustProtoHeader: true}));
-        server.use(helmet())
-        // server.use(helmet.contentSecurityPolicy({
-        //     directives: {
-        //         defaultSrc: ["'self'", 'calendly.com'],
-        //         scriptSrc: ["'self'"],
-        //         styleSrc: ["'self'", 'style.com'],
-        //         imgSrc: ["'self'", 'data:'],
-        //         reportUri: '/report-violation'
-        //     }
-        // }));
-        // server.use(helmet.hidePoweredBy());
-        // // server.use(helmet.hpkp());
-        // server.use(helmet.hsts());
-        // server.use(helmet.ieNoOpen());
-        // // server.use(helmet.noCache());
-        // server.use(helmet.noSniff());
-        // server.use(helmet.frameguard());
-        // server.use(helmet.xssFilter());
+        // server.use(helmet())
+        server.use(helmet.contentSecurityPolicy({
+            directives: {
+                defaultSrc: ["'self'", 'unsafe-inline', 'calendly.com'],
+                scriptSrc: ["'self'"],
+                scriptSrcElem: ["'self'", 'calendly.com'],
+                styleSrc: ["'self'"],
+                imgSrc: ["'self'", 'itch.io'],
+                reportUri: '/report-violation'
+            }
+        }));
+        server.use(helmet.hidePoweredBy());
+        // server.use(helmet.hpkp());
+        server.use(helmet.hsts());
+        server.use(helmet.ieNoOpen());
+        // server.use(helmet.noCache());
+        server.use(helmet.noSniff());
+        server.use(helmet.frameguard());
+        server.use(helmet.xssFilter());
         SetupDatabaseProduction();
         break;
     case 'development':
