@@ -21,7 +21,7 @@ function SetupDatabaseProduction() {
 }
 exports.SetupDatabaseProduction = SetupDatabaseProduction;
 class Database {
-    constructor(url) {
+    constructor(url, rejectUnauthorized = true) {
         // this.Pool = new Pool({
         //     user: process.env.DATABASE_USERNAME || config.database.username,
         //     password:process.env.DATABASE_PASSWORD || config.database.password,
@@ -30,7 +30,10 @@ class Database {
         //     database: process.env.DATABASE_DATABASE || config.database.database
         // })
         this.Pool = new pg_1.Pool({
-            connectionString: url
+            connectionString: url,
+            ssl: {
+                rejectUnauthorized
+            }
         });
     }
     static ConstructUri(username, password, host, port, database) {

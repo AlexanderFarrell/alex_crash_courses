@@ -21,7 +21,7 @@ export function SetupDatabaseProduction() {
 class Database {
     public Pool: Pool;
 
-    constructor(url: string) {
+    constructor(url: string, rejectUnauthorized: boolean = true) {
         // this.Pool = new Pool({
         //     user: process.env.DATABASE_USERNAME || config.database.username,
         //     password:process.env.DATABASE_PASSWORD || config.database.password,
@@ -30,7 +30,10 @@ class Database {
         //     database: process.env.DATABASE_DATABASE || config.database.database
         // })
         this.Pool = new Pool({
-            connectionString: url
+            connectionString: url,
+            ssl: {
+                rejectUnauthorized
+            }
         })
     }
 
