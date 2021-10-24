@@ -13,9 +13,6 @@ const server = express();
 const port = process.env.PORT || 3000;
 const runtime_mode = process.env.RUNTIME_MODE || 'development';
 
-// @ts-ignore
-const config = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'server.config.json')));
-
 // view engine setup
 server.set('views', path.join(__dirname, 'views'));
 server.set('view engine', 'ejs');
@@ -33,6 +30,8 @@ switch (runtime_mode) {
         SetupDatabaseProduction();
         break;
     case 'development':
+        // @ts-ignore
+        const config = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'server.config.json')));
         SetupDatabaseDevelopment(config);
         break;
     default:
