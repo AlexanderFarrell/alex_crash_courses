@@ -53,21 +53,28 @@
     <div id="Content">
       <%- include(content) %>
     </div>
-    <footer>
+
+  </div>
+  <footer>
+    <div class="ContentItem">
       <br>
       <div style="display: grid; grid-template-columns: 1fr 1fr 1fr">
-        <a href="/privacy" style="text-align: center">
+        <a class="FooterButton" href="/privacy" style="text-align: center">
           Privacy
         </a>
-        <a href="https://github.com/AlexanderFarrell/alex_crash_courses" style="text-align: center">
-          View the Code for this Website!
+        <a class="FooterButton" href="https://github.com/AlexanderFarrell/alex_crash_courses" style="text-align: center">
+          View the Code for this Website
         </a>
-        <a href="/terms" style="text-align: center">
+        <a href="/terms" class="FooterButton" style="text-align: center">
           Terms
         </a>
       </div>
       <br>
-    </footer>
-  </div>
+    </div>
+  </footer>
 </body>
+<script>
+  // const scrollbarWidth = window.innerWidth - document.body.clientWidth
+  // document.body.setProperty('--scrollbarWidth', scrollbarWidth);
+</script>
 </html>

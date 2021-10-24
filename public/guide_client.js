@@ -21,18 +21,20 @@ async function AddItems(data_attr_name, source_f) {
         const data_name = element.getAttribute('data-' + data_attr_name);
 
         let container = document.createElement('div');
+        container.classList.add("Lessons")
         element.appendChild(container);
         let loadingElement = document.createElement('div');
         loadingElement.innerHTML = 'Loading units...';
         try {
             let items = await source_f(data_name);
             items.forEach(item => {
-                let itemContainer = document.createElement('div');
+                // let itemContainer = document.createElement('div');
                 let linkContainer = document.createElement('a');
+                linkContainer.classList.add('Button');
                 linkContainer.setAttribute('href', `/courses/guide/lessons/${item.title}`)
-                linkContainer.innerHTML = `<h1>${item.title}</h1><p>${item.description}</p>`;
-                itemContainer.appendChild(linkContainer);
-                container.appendChild(itemContainer);
+                linkContainer.innerHTML = `<h3>${item.title}</h3><div class="RegText">${item.description}</div>`;
+                // itemContainer.appendChild(linkContainer);
+                container.appendChild(linkContainer);
             })
         } catch (e) {
             console.error(e);

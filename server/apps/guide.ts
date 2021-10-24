@@ -81,7 +81,8 @@ export class Guide extends RouteNode {
             try {
                 const data = await this.GetUnits(req.params['name']);
                 if (data.length > 0) {
-                    RenderPage(res, req.params['name'], 'guide/class.ejs', {units: data})
+                    data['name'] = req.params['name'];
+                    RenderPage(res, req.params['name'], 'guide/class.ejs', {name: req.params['name'], units: data})
                 } else {
                     res.sendStatus(404);
                 }

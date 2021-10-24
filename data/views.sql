@@ -19,7 +19,7 @@ from item
 where item_type = 'unit'
     );
 
-create view units as
+create view lessons as
 (
 select id, title, description
 from item

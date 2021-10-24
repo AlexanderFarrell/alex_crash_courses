@@ -7,6 +7,8 @@ create type item_type as enum (
     'example'
     );
 
+alter type item_type add value 'lesson';
+
 create table item
 (
     id          serial primary key,

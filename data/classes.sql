@@ -91,8 +91,8 @@ delete from item
 
 (select count('any') from item where title = 'Get Started' limit 1);
 
-call add_lesson('Welcome!',
-    'Begin your programming journey here!',
+call add_lesson('Begin Your Journey',
+    'Let''s begin our courses',
     'Getting Started',
     '<h1>Welcome!</h1>
 <p>The first courses will take you through several of the fundamentals of programming.</p>
@@ -113,7 +113,7 @@ call add_lesson('Welcome!',
 <p>Later, we will show these concepts with Python and JavaScript alongside one another. </p>');
 
 call add_lesson('Set Up',
-    'How to get set up for programming.',
+    'Getting everything set up for programming.',
                 'Getting Started',
     '<h1>Set Up</h1>
 <p>To start with Python, I recommend an online editor.</p>
@@ -126,8 +126,8 @@ call add_lesson('Set Up',
 <a target="_blank" rel="noopener noreferrer"  href="https://wiki.python.org/moin/IntegratedDevelopmentEnvironments">IDEs listed on the official Python wiki. Choose the one you like.</a>
 <p>I personally use PyCharm, but I am not sponsoring it here. This is just my personal preference.</p>');
 
-call add_lesson('First Program',
-    'Your first program.',
+call add_lesson('Your First Program',
+    'Write your first program and dive into code.',
                 'Getting Started',
     '<h1>First Program</h1>
 <p>Let''s start with our first program!</p>

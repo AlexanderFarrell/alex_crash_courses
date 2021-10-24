@@ -1,17 +1,10 @@
-<div id="Classes">
+<div style="padding-top: 2vh; padding-bottom: 2vh;">
+    <h1><%= name %></h1>
+</div>
+<div id="Lessons">
     <% for (var i = 0; i < units.length; i++) {%>
         <div data-unit_name="<%= units[i].title%>">
-            <div>
-                <h2>
-                    <%= units[i].title%>
-                </h2>
-                <p>
-                    <%= units[i].description%>
-                </p>
-            </div>
-<!--            <a href="/courses/guide/lessons/<%= units[i].title%>">-->
-<!--                -->
-<!--            </a>-->
+            <h2><%= units[i].title%></h2>
         </div>
     <%}%>
 </div>
