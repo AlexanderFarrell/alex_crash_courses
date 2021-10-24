@@ -1,0 +1,11 @@
+#Home {
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 20px;
+  row-gap: 20px;
+  grid-template-areas: "a a a" "b c d";
+}
+
+/*# sourceMappingURL=home_views.css.map */

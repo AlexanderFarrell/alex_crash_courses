@@ -1,0 +1,280 @@
+.ContactButton {
+  display: grid;
+  grid-template-columns: auto 3fr;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  justify-content: space-evenly;
+  justify-items: stretch;
+  /*width: 80%;*/
+  background-position: -25px 0;
+  box-shadow: 1px 1px 5px black;
+  border-radius: 10px;
+  color: white;
+  /*text-shadow: 1px 1px 3px black;*/
+}
+
+/*.ContactButton > h3 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    font-size: 1rem;
+}*/
+#GetStartedButtons {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 1.1rem;
+  width: 90%;
+}
+
+.ContactTitle {
+  font-size: 1.3rem;
+  padding: 0;
+  margin: 0;
+}
+
+#Languages {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+#LanguagesContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 100px);
+  grid-gap: 2rem;
+  justify-content: space-between;
+}
+
+.LanguageIcon {
+  display: grid;
+  place-items: center;
+}
+
+.LanguageIcon > img {
+  width: 80%;
+}
+
+.LanguageIcon > div {
+  font-size: 1rem;
+}
+
+#TechnologiesContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.TechnologyIcon {
+  display: grid;
+  place-items: center;
+}
+
+.TechnologyIcon > img {
+  width: 80%;
+}
+
+.TechnologyIcon > div {
+  font-size: 1rem;
+}
+
+p {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+
+.CourseIcon {
+  height: 3rem;
+  object-fit: contain;
+}
+
+.CourseButton {
+  color: white;
+  backdrop-filter: blur(8px) brightness(300%) hue-rotate(90deg);
+  box-shadow: 1px 1px 5px black;
+  border-radius: 10px;
+  font-size: min(2.7vw, 2.7vh);
+  justify-content: center;
+  justify-items: center;
+  padding: 10%;
+}
+
+.Benefit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  grid-gap: 5%;
+  padding-bottom: 2rem;
+}
+
+.BenefitL {
+  direction: rtl;
+}
+
+.BenefitImage {
+  object-fit: cover;
+  border-radius: 10px;
+  direction: ltr;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  direction: ltr;
+  padding-bottom: 30px;
+}
+
+.BenefitImage > img {
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.BenefitTitle {
+  font-size: 1.5rem;
+  direction: ltr;
+  min-width: 0;
+  min-height: 0;
+  box-sizing: border-box;
+}
+
+.BenefitText {
+  font-size: 1.25rem;
+  direction: ltr;
+  box-sizing: border-box;
+}
+
+.BenefitDescription {
+  direction: ltr;
+  font-size: 1rem;
+  min-width: 0;
+  min-height: 0;
+  box-sizing: border-box;
+}
+
+.SmallIcon {
+  font-size: 2rem;
+  padding-left: 1rem;
+}
+
+#Lessn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.Less {
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+}
+
+#MainItem {
+  display: grid;
+  padding: 7vh 0 14vh 0;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  place-content: center;
+  direction: rtl;
+  grid-auto-flow: dense;
+}
+
+#MainItemTitle {
+  /*font-family: "Space Mono", monospace;*/
+  font-size: 2.7rem;
+}
+
+#MainItemInfo {
+  display: grid;
+  place-items: center;
+  place-content: space-between;
+  grid-gap: 2rem;
+  direction: ltr;
+}
+
+#Lessn {
+  grid-template-columns: 1fr;
+}
+
+#MainItemLogo {
+  display: grid;
+  padding: 12%;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+#MainItemDetails {
+  font-size: 1rem;
+}
+
+#GetStarted {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  place-content: stretch;
+  padding-bottom: 3vh;
+}
+
+#GetStartedLogo {
+  transition: 0.5s;
+  padding: 20%;
+}
+
+@media only screen and (max-width: 800px) {
+  #MainItem {
+    grid-template-columns: 1fr;
+    width: 100%;
+    padding: 2vh 5% 10vh 5%;
+    transition: 0.2s;
+  }
+
+  #MainItemInfo {
+    padding: 0;
+  }
+
+  #MainItemLogo {
+    padding: 10% 20%;
+  }
+
+  #MainItemDetails {
+    font-size: 1rem;
+  }
+
+  #GetStarted {
+    grid-template-columns: 1fr;
+    padding-bottom: 9vh;
+  }
+
+  #GetStartedButtons {
+    width: 65%;
+  }
+
+  #GetStartedLogo {
+    padding: 10% 30%;
+    transition: 0.5s;
+  }
+
+  .Benefit {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-gap: 0;
+    padding-bottom: 3rem;
+  }
+
+  .BenefitImage {
+    min-width: 100%;
+    min-height: 100%;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+
+  .BenefitTitle {
+    grid-row: 1;
+  }
+
+  .BenefitText {
+    grid-row: 3;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .CourseButton {
+    font-size: min(3.5vw, 3.5vh);
+  }
+}
+
+/*# sourceMappingURL=courses.css.map */
