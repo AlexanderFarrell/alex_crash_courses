@@ -30,10 +30,10 @@ switch (runtime_mode) {
         server.use(helmet.contentSecurityPolicy({
             directives: {
                 defaultSrc: ["'self'", 'calendly.com'],
-                scriptSrc: ["'self'"],
+                scriptSrc: ["'self'", 'calendly.com'],
                 scriptSrcElem: ["'self'", 'calendly.com'],
-                styleSrcElem: ["'self'"],
-                styleSrc: ["'self'"],
+                styleSrcElem: ["'self'", "fonts.googleapis.com", "cdn.jsdelivr.net"],
+                styleSrc: ["'self'", "fonts.googleapis.com", "cdn.jsdelivr.net"],
                 imgSrc: ["'self'", 'itch.io'],
                 reportUri: '/report-violation'
             }
