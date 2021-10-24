@@ -26,6 +26,7 @@ server.use(express.static(path.join(__dirname, '../public')));
 switch (runtime_mode) {
     case 'production':
         server.use(enforce.HTTPS({trustProtoHeader: true}));
+        server.use(helmet())
         // server.use(helmet.contentSecurityPolicy({
         //     directives: {
         //         defaultSrc: ["'self'", 'calendly.com'],

@@ -7,6 +7,7 @@ const logger = require("morgan");
 const routes_1 = require("./routes");
 const fs = require("fs");
 const database_1 = require("./apps/database");
+const helmet = require("helmet");
 const enforce = require("express-sslify");
 const server = express();
 const port = process.env.PORT || 3000;
@@ -22,6 +23,7 @@ server.use(express.static(path.join(__dirname, '../public')));
 switch (runtime_mode) {
     case 'production':
         server.use(enforce.HTTPS({ trustProtoHeader: true }));
+        server.use(helmet());
         // server.use(helmet.contentSecurityPolicy({
         //     directives: {
         //         defaultSrc: ["'self'", 'calendly.com'],
