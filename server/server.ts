@@ -35,14 +35,14 @@ switch (runtime_mode) {
         //         reportUri: '/report-violation'
         //     }
         // }));
-        server.use(helmet.hidePoweredBy());
-        // server.use(helmet.hpkp());
-        server.use(helmet.hsts());
-        server.use(helmet.ieNoOpen());
-        // server.use(helmet.noCache());
-        server.use(helmet.noSniff());
-        server.use(helmet.frameguard());
-        server.use(helmet.xssFilter());
+        // server.use(helmet.hidePoweredBy());
+        // // server.use(helmet.hpkp());
+        // server.use(helmet.hsts());
+        // server.use(helmet.ieNoOpen());
+        // // server.use(helmet.noCache());
+        // server.use(helmet.noSniff());
+        // server.use(helmet.frameguard());
+        // server.use(helmet.xssFilter());
         SetupDatabaseProduction();
         break;
     case 'development':

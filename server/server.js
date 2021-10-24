@@ -7,7 +7,6 @@ const logger = require("morgan");
 const routes_1 = require("./routes");
 const fs = require("fs");
 const database_1 = require("./apps/database");
-const helmet = require("helmet");
 const enforce = require("express-sslify");
 const server = express();
 const port = process.env.PORT || 3000;
@@ -32,14 +31,14 @@ switch (runtime_mode) {
         //         reportUri: '/report-violation'
         //     }
         // }));
-        server.use(helmet.hidePoweredBy());
-        // server.use(helmet.hpkp());
-        server.use(helmet.hsts());
-        server.use(helmet.ieNoOpen());
-        // server.use(helmet.noCache());
-        server.use(helmet.noSniff());
-        server.use(helmet.frameguard());
-        server.use(helmet.xssFilter());
+        // server.use(helmet.hidePoweredBy());
+        // // server.use(helmet.hpkp());
+        // server.use(helmet.hsts());
+        // server.use(helmet.ieNoOpen());
+        // // server.use(helmet.noCache());
+        // server.use(helmet.noSniff());
+        // server.use(helmet.frameguard());
+        // server.use(helmet.xssFilter());
         (0, database_1.SetupDatabaseProduction)();
         break;
     case 'development':
