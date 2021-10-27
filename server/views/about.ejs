@@ -1,8 +1,9 @@
 <style>
     #AboutMain {
-        padding-top: 3em;
+        padding-top: 2.5vw;
+        /*padding-top: 3em;*/
         display: grid;
-        grid-row-gap: 3em;
+        /*grid-row-gap: 3em;*/
     }
     #About {
         display: grid;
@@ -23,6 +24,11 @@
     .Pad {
         padding: 1%;
     }
+    @media only screen and (max-width: 800px) {
+        #About {
+            grid-template-columns: 1fr;
+        }
+    }
 </style>
 <div id="AboutMain">
     <div class="Category">
@@ -39,6 +45,69 @@
 <!--                <p>The purpose of this website is to provide lessons, articles and games which do this. Below are statistics I will keep to measure overtime and to stay accountable to the world in accomplishing this goal.</p>-->
                 <p>Thank you for visiting my site, and I hope I can provide value to you.</p>
             </div>
+        </div>
+    </div>
+    <div class="Category">
+        <div style="padding-top: 3vh; padding-bottom: 3vh;">
+            <h1>Work</h1>
+        </div>
+        <h2>Games</h2>
+        <div class="TwoColumn" style="grid-gap: 20px; grid-template-rows: 1fr; align-items: stretch">
+            <a href="https://morphsight.itch.io/orderedenergy">
+                <div class="PictureButton">
+                    <img src="https://img.itch.zone/aW1hZ2UvODA1NTA2LzQ1ODI1NDEucG5n/original/nvwnb8.png">
+                    <div>Ordered Energy by MorphSight</div>
+                </div>
+            </a>
+            <a href="https://class-project-stock-simulator.herokuapp.com/">
+                <div class="PictureButton">
+                    <img style="object-fit: cover" src="images/ssim.png">
+                    <div>Stock Simulator - Class Project</div>
+                </div>
+            </a>
+        </div>
+
+        <h2>Games in Alpha</h2>
+        <div class="TwoColumn" style="grid-gap: 20px; grid-template-rows: 1fr; align-items: stretch">
+            <a href="/work/raise_triton">
+                <div class="PictureButton">
+                    <img width="100%" height="52.916%" style="object-fit: cover" src="images/World.png">
+                    <div>Raise Triton by MorphSight</div>
+                </div>
+            </a>
+            <a href="/work/buried_peace">
+                <div class="PictureButton">
+                    <img style="object-fit: cover" src="images/buried.png">
+                    <div>Buried Peace</div>
+                </div>
+            </a>
+        </div>
+
+        <h2>Art</h2>
+        <div class="TwoColumn" style="grid-gap: 20px; grid-template-rows: 1fr; align-items: stretch">
+            <a href="/work/space">
+                <div class="PictureButton">
+                    <img width="100%" height="52.916%" style="object-fit: cover" src="images/space1.jpg">
+                    <div>Space</div>
+                </div>
+            </a>
+
+            <a href="/work/fractals">
+                <div class="PictureButton">
+                    <img style="object-fit: cover" src="images/fractal3.jpg">
+                    <div>Fractals</div>
+                </div>
+            </a>
+        </div>
+
+        <h2>Games In Development</h2>
+        <div class="TwoColumn" style="grid-gap: 20px; grid-template-rows: 1fr; align-items: stretch">
+            <a href="/work/void_money">
+                <div class="PictureButton">
+                    <img width="100%" height="52.916%" style="object-fit: cover" src="https://img.itch.zone/aW1nLzM4OTM3ODEucG5n/original/r%2Bx%2F9A.png">
+                    <div>Void Money by MorphSight</div>
+                </div>
+            </a>
         </div>
     </div>
     <div class="Category">

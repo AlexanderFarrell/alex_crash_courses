@@ -1,4 +1,8 @@
+@import "constants";
 
+#CoursesHome {
+  background: radial-gradient($background-color, $mid-dark-color);
+}
 
 #Home {
   padding: 15px;

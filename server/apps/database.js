@@ -22,13 +22,6 @@ function SetupDatabaseProduction() {
 exports.SetupDatabaseProduction = SetupDatabaseProduction;
 class Database {
     constructor(url, rejectUnauthorized = true) {
-        // this.Pool = new Pool({
-        //     user: process.env.DATABASE_USERNAME || config.database.username,
-        //     password:process.env.DATABASE_PASSWORD || config.database.password,
-        //     host: process.env.DATABASE_HOST || config.database.host,
-        //     port: process.env.DATABASE_PORT || config.database.port,
-        //     database: process.env.DATABASE_DATABASE || config.database.database
-        // })
         this.Pool = new pg_1.Pool({
             connectionString: url,
             ssl: {

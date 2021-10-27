@@ -25,23 +25,6 @@ class Clients extends route_1.RouteNode {
         }), (name) => {
             return name + " - Games - ";
         });
-        // TryAppDataRoute(
-        //     app,
-        //     `${parent_route}/apps/:name`,
-        //     ['name'],
-        //     "Unable to retrieve app",
-        //     async (name) => {
-        //         return await this.GetApp(name)
-        //     });
-        //
-        // TryAppDataRoute(
-        //     app,
-        //     `${parent_route}/games/:name`,
-        //     ['name'],
-        //     "Unable to retrieve game.",
-        //     async (name) => {
-        //         return await this.GetGame(name)
-        //     });
     }
     GetApp(app_name) {
         return __awaiter(this, void 0, void 0, function* () {

@@ -1,3 +1,16 @@
+.HomeNavButton {
+  grid-auto-flow: column;
+  grid-gap: 5px;
+}
+
+.NavButton {
+  display: grid;
+  text-align: center;
+  place-items: center;
+  color: white;
+  padding: 10px;
+}
+
 .NavButton:hover {
   transition: 0.2s;
   background-color: $mid-dark-color;

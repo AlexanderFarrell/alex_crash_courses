@@ -23,13 +23,6 @@ class Database {
     public Pool: Pool;
 
     constructor(url: string, rejectUnauthorized: boolean = true) {
-        // this.Pool = new Pool({
-        //     user: process.env.DATABASE_USERNAME || config.database.username,
-        //     password:process.env.DATABASE_PASSWORD || config.database.password,
-        //     host: process.env.DATABASE_HOST || config.database.host,
-        //     port: process.env.DATABASE_PORT || config.database.port,
-        //     database: process.env.DATABASE_DATABASE || config.database.database
-        // })
         this.Pool = new Pool({
             connectionString: url,
             ssl: {
