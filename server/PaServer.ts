@@ -34,8 +34,8 @@ export class PaServer {
                         directives: {
                             ...helmet.contentSecurityPolicy.getDefaultDirectives(),
                             "script-src": ["'self'", "https://assets.calendly.com"],
-                            "object-src": ["https://wakatime.com"],
-                            "img-src": ["https://img.itch.zone"]
+                            "object-src": ["'self'", "https://wakatime.com"],
+                            "img-src": ["'self'", "https://img.itch.zone"]
                         }
                     }
                 }))
