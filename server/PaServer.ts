@@ -29,7 +29,15 @@ export class PaServer {
         switch (runtime_mode) {
             case 'production':
                 this.Express.use(enforce.HTTPS({trustProtoHeader: true}));
-                this.Express.use(helmet())
+                this.Express.use(helmet({
+                    contentSecurityPolicy: {
+                        directives: {
+                            ...helmet.contentSecurityPolicy.getDefaultDirectives(),
+                            "script-src": ["'self'", "'calendly.com'"],
+                            "object-src": ["'wakatime.com'"],
+                        }
+                    }
+                }))
                 SetupDatabaseProduction();
                 break;
             case 'development':
