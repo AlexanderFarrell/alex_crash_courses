@@ -25,7 +25,7 @@ class PaServer {
                 this.Express.use(enforce.HTTPS({ trustProtoHeader: true }));
                 this.Express.use(helmet({
                     contentSecurityPolicy: {
-                        directives: Object.assign(Object.assign({}, helmet.contentSecurityPolicy.getDefaultDirectives()), { "script-src": ["'self'", "'calendly.com'"], "object-src": ["'wakatime.com'"] })
+                        directives: Object.assign(Object.assign({}, helmet.contentSecurityPolicy.getDefaultDirectives()), { "script-src": ["'self'", "https://assets.calendly.com"], "object-src": ["https://wakatime.com"], "img-src": ["https://img.itch.zone"] })
                     }
                 }));
                 (0, database_1.SetupDatabaseProduction)();
