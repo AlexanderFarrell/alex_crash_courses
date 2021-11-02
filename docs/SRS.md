@@ -1,6 +1,0 @@
-# SRS
-
-## Purpose
-
-## Business 
-
