@@ -15,20 +15,25 @@ export function SetupDatabaseDevelopment(config) {
 export function SetupDatabaseProduction() {
     Data = new Database(
         process.env.DATABASE_URL,
-        false
+        true
     )
 }
 
 class Database {
     public Pool: Pool;
 
-    constructor(url: string, rejectUnauthorized: boolean = true) {
-        this.Pool = new Pool({
+    constructor(url: string, production: boolean = false) {
+        let config = {
             connectionString: url,
-            ssl: {
-                rejectUnauthorized
+        }
+
+        if (production) {
+            config['ssl'] = {
+                rejectUnauthorized: false
             }
-        })
+        }
+
+        this.Pool = new Pool(config);
     }
 
     public static ConstructUri(

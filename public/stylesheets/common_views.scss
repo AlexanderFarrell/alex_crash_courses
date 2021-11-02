@@ -50,6 +50,8 @@
   transition: 0.2s;
 }
 
+
+
 .NonPictureButton:hover {
   transition: 0.2s;
 }
@@ -139,4 +141,11 @@
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.35);
   overflow: hidden;
   padding: 10px;
+}
+
+.CatButton {
+  background-color: #000031;
+  padding: 20px;
+  text-align: center;
+  color: white;
 }

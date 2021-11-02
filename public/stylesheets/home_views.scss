@@ -2,16 +2,100 @@
 
 #CoursesHome {
   background: radial-gradient($background-color, $mid-dark-color);
+  padding: 0 5%;
 }
 
+//#Home {
+//  padding: 15px;
+//  display: grid;
+//  grid-template-columns: 1fr 1fr 1fr;
+//  grid-template-rows: auto auto;
+//  column-gap: 20px;
+//  row-gap: 20px;
+//  grid-template-areas:
+//            "a a a"
+//            "b c d";
+//}
+
 #Home {
-  padding: 15px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto;
-  column-gap: 20px;
-  row-gap: 20px;
-  grid-template-areas:
-            "a a a"
-            "b c d";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  //grid-gap: 20px;
+  //padding-top: 20px;
+  //padding-bottom: 20px;
+}
+
+.CoursesAdItem {
+  padding: 1% 0;
+}
+
+.MainMenuScreen {
+  //height: 40vw;
+  text-align: center;
+  color: white;
+  display: grid;
+  place-items: center;
+  //padding: 5%;
+  padding: 0 5%;
+  //background-color: #77b4fa;
+  //background: radial-gradient($background-color, $mid-dark-color);
+}
+
+.mainMid {
+  background: radial-gradient(rgb(11, 28, 138), rgb(5, 6, 23));
+}
+
+
+.blueMid {
+  background: radial-gradient($background-color, $mid-dark-color);
+}
+
+.magentaMid {
+  background: radial-gradient(rgb(40, 12, 166), rgb(19, 7, 73));
+}
+
+.softMid {
+  background: radial-gradient(rgb(166, 176, 192), rgb(66, 66, 77));
+  color: #cbcbcb !important;
+}
+
+.turquoiseMid {
+  background: radial-gradient(rgb(12, 112, 166), rgb(6, 51, 77));
+}
+
+.MainMenuScreen img {
+  max-width: 40%;
+  object-fit: contain;
+}
+
+.MainMenuScreen, .MainMenuButton {
+  display: grid;
+  padding: 5%;
+  grid-template-rows: 1fr auto auto;
+}
+
+.MainMenuButton img {
+  max-width: 40%;
+  object-fit: contain;
+}
+
+.MainMenuButton {
+  //height: 40vw;
+  text-align: center;
+  color: white;
+  display: grid;
+  place-items: center;
+  //padding: 5%;
+  //background-color: #77b4fa;
+  //background: radial-gradient($background-color, $mid-dark-color);
+}
+
+@media only screen and (max-width: 600px) {
+  .MainMenuButton, .MainMenuScreen {
+    //height: 80vw;
+  }
+  #Home {
+    grid-template-columns: 1fr;
+  }
 }

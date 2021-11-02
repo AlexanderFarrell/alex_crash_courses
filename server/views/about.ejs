@@ -10,6 +10,10 @@
         grid-template-columns: 1fr 2fr;
         grid-gap: 20px;
     }
+    #CenterAbout img {
+        width: 50vmin;
+        border-radius: 10px;
+    }
     .ContactItem {
         display: grid;
         grid-template-columns: 200px 1fr;
@@ -24,106 +28,268 @@
     .Pad {
         padding: 1%;
     }
+    .Marbles img {
+        padding-left: 25%;
+        padding-right: 25%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+    #CenterAbout {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        padding: 2vmin;
+    }
+
+    .Headingish {
+        font-size: 2rem;
+        place-items: center; text-align: center; align-content: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .BlockText {
+        padding: 4rem 10%; font-size: 2rem; place-items: center; display: grid; text-align: center; align-content: center; grid-gap: 2rem
+    }
     @media only screen and (max-width: 800px) {
         #About {
             grid-template-columns: 1fr;
         }
+        #CenterAbout {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        .BlockText {
+            font-size: 2rem; place-items: center; display: grid; text-align: center; align-content: center; grid-gap: 1rem
+        }
     }
 </style>
-<div id="AboutMain">
-    <div class="Category">
-        <div id="About">
-            <div style="overflow: hidden">
-                <img src="images/alex.jpg" style="border-radius: 10px; width: 100%; object-fit: contain; place-items: center; justify-content: center">
-<!--                <a href="mailto: info@alexanderfarrell.com" class="ContactItem">-->
-<!--                    info@alexanderfarrell.com-->
-<!--                </a>-->
-            </div>
-            <div class="Pad">
-                <h3 style="padding-top: 0.8em">Alexander Farrell</h3>
-                <p>Hello, my name is Alexander Farrell. I help people develop talents through lessons, articles and games. </p>
-<!--                <p>The purpose of this website is to provide lessons, articles and games which do this. Below are statistics I will keep to measure overtime and to stay accountable to the world in accomplishing this goal.</p>-->
-                <p>Thank you for visiting my site, and I hope I can provide value to you.</p>
+<div class="StretchWidth magentaMid ">
+    <div class="magentaMid">
+        <div class="ContentItem">
+            <div id="CenterAbout">
+                <img src="images/alex.jpg" style="width: 100%; object-fit: contain">
+                <div class="BlockText">
+                    <div>Hello, my name is Alexander Farrell.</div>
+                    <!--            <div class="RegText">And thank you for visiting my site</div>-->
+                </div>
             </div>
         </div>
     </div>
-    <div class="Category">
-        <div style="padding-top: 3vh; padding-bottom: 3vh;">
-            <h1>Work</h1>
-        </div>
-        <h2>Games</h2>
-        <div class="TwoColumn" style="grid-gap: 20px; grid-template-rows: 1fr; align-items: stretch">
-            <a href="https://morphsight.itch.io/orderedenergy">
-                <div class="PictureButton">
-                    <img src="https://img.itch.zone/aW1hZ2UvODA1NTA2LzQ1ODI1NDEucG5n/original/nvwnb8.png">
-                    <div>Ordered Energy by MorphSight</div>
-                </div>
-            </a>
-            <a href="https://class-project-stock-simulator.herokuapp.com/">
-                <div class="PictureButton">
-                    <img style="object-fit: cover" src="images/ssim.png">
-                    <div>Stock Simulator - Class Project</div>
-                </div>
-            </a>
-        </div>
+    <div class="mainMid BlockText">
+        <div>I enjoy teaching people.</div>
+        <div>I enjoy helping people.</div>
+<!--        <div class="Headingish">-->
+<!--            I want to thank you for -->
+<!--        </div>-->
+    </div>
+    <div class="magentaMid BlockText">
+        <div class="ContentItem">
+            If I am to help others
 
-        <h2>Games in Alpha</h2>
-        <div class="TwoColumn" style="grid-gap: 20px; grid-template-rows: 1fr; align-items: stretch">
-            <a href="/work/raise_triton">
-                <div class="PictureButton">
-                    <img width="100%" height="52.916%" style="object-fit: cover" src="images/World.png">
-                    <div>Raise Triton by MorphSight</div>
-                </div>
-            </a>
-            <a href="/work/buried_peace">
-                <div class="PictureButton">
-                    <img style="object-fit: cover" src="images/buried.png">
-                    <div>Buried Peace</div>
-                </div>
-            </a>
-        </div>
-
-        <h2>Art</h2>
-        <div class="TwoColumn" style="grid-gap: 20px; grid-template-rows: 1fr; align-items: stretch">
-            <a href="/work/space">
-                <div class="PictureButton">
-                    <img width="100%" height="52.916%" style="object-fit: cover" src="images/space1.jpg">
-                    <div>Space</div>
-                </div>
-            </a>
-
-            <a href="/work/fractals">
-                <div class="PictureButton">
-                    <img style="object-fit: cover" src="images/fractal3.jpg">
-                    <div>Fractals</div>
-                </div>
-            </a>
-        </div>
-
-        <h2>Games In Development</h2>
-        <div class="TwoColumn" style="grid-gap: 20px; grid-template-rows: 1fr; align-items: stretch">
-            <a href="/work/void_money">
-                <div class="PictureButton">
-                    <img width="100%" height="52.916%" style="object-fit: cover" src="https://img.itch.zone/aW1nLzM4OTM3ODEucG5n/original/r%2Bx%2F9A.png">
-                    <div>Void Money by MorphSight</div>
-                </div>
-            </a>
         </div>
     </div>
-    <div class="Category">
-        <h3>Languages Over Time</h3>
-        <div>
-            <figure><embed src="https://wakatime.com/share/@043fa528-533c-4629-8dbc-8b3a99679a86/18b79de5-df8b-4d5f-bfd3-7b2094d51dd2.svg"></embed></figure>
+    <div class="mainMid">
+        <div class="TwoColumn ContentItem">
+            <div class="BlockText">
+                I must work hard
+            </div>
+            <div class="BlockText">
+                I must be organized
+            </div>
         </div>
     </div>
-    <div class="Category">
-        <h3>Editors</h3>
-        <div>
-            <figure><embed src="https://wakatime.com/share/@043fa528-533c-4629-8dbc-8b3a99679a86/56e476ef-ce4b-4930-b5fc-724d77b02009.svg"></embed></figure>
+    <div class="magentaMid">
+        <div class="BlockText">
+            <div>I call these <span class="accent">marbles</span></div>
         </div>
+    </div>
+    <div class="BlockText mainMid">
+        <div class="TwoColumn Marbles ContentItem">
+            <img src="/images/marbles/hi/Imagination2.png">
+            <img src="/images/marbles/hi/c.png">
+            <img src="/images/marbles/hi/Waves.png">
+            <img src="/images/marbles/hi/fe.png">
+        </div>
+    </div>
+    <div class="BlockText magentaMid">
+        <div>Marbles are <span class="accent">Projects</span></div>
+    </div>
+    <div class="mainMid">
+        <div class="BlockText ContentItem TwoColumn">
+            <div>
+                Programming Courses
+            </div>
+            <div>
+                <img src="images/marbles/hi/courses.png">
+            </div>
+            <div>
+                Programming Tutorials
+            </div>
+            <div>
+                <img src="images/marbles/hi/ColdChaos.png">
+            </div>
+            <div>
+                Games
+            </div>
+            <div>
+                <img src="images/marbles/hi/b.png">
+            </div>
+            <div>
+                Publications
+            </div>
+            <div>
+                <img src="images/marbles/hi/VariantAligned.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="BlockText magentaMid">
+        <div>Marbles Symbolize Goals for Projects</div>
+    </div>
+    <div class="mainMid">
+        <div class="BlockText ContentItem TwoColumn" style="row-gap: 3rem">
+            <div>
+                Inner Beauty
+            </div>
+            <div class="RegText">To be true, valuable, honest and integral. To provide solutions to people's needs.</div>
+            <div>
+                Outer Beauty
+            </div>
+            <div class="RegText">To be found and identified as solutions to people's needs.</div>
+            <div>
+                Contiguous
+            </div>
+            <div class="RegText">To be adaptable and continually revised. Spheres convey continuity.  </div>
+            <div>
+                Brilliant
+            </div>
+            <div class="RegText">To be enjoyable and exciting. </div>
+        </div>
+    </div>
+    <div class="BlockText magentaMid">
+        This website hosts some of my projects
+    </div>
+    <div class="BlockText mainMid">
+        <div>And I want to <span class="accent">thank you</span> so much for stopping by</div>
+        <div>I hope my work can be of service to you.</div>
+    </div>
+    <div class="BlockText magentaMid">
+        Some statistics about my work.
+        <div class="RegText">Programming Languages and Editors</div>
+    </div>
+    <div>
+        <div class="mainMid">
+            <div class="ContentItem">
+                <figure style="min-height: 100%"><embed src="https://wakatime.com/share/@043fa528-533c-4629-8dbc-8b3a99679a86/18b79de5-df8b-4d5f-bfd3-7b2094d51dd2.svg"></embed></figure>
+            </div>
+            <div class="ContentItem">
+                <figure style="margin: 0; padding: 2%"><embed src="https://wakatime.com/share/@043fa528-533c-4629-8dbc-8b3a99679a86/56e476ef-ce4b-4930-b5fc-724d77b02009.svg"></embed></figure>
+            </div>
+        </div>
+
+    </div>
+    <div class="mainMid">
+
+    </div>
+    <div class="BlockText magentaMid">
+        Thank you for visiting my website.
     </div>
 </div>
-<br>
+<!--<div id="AboutMain">-->
+<!--    <div class="Category">-->
+<!--        <div id="About">-->
+<!--            <div style="overflow: hidden">-->
+<!--                <img src="images/alex.jpg" style="border-radius: 10px; width: 100%; object-fit: contain; place-items: center; justify-content: center">-->
+<!--&lt;!&ndash;                <a href="mailto: info@alexanderfarrell.com" class="ContactItem">&ndash;&gt;-->
+<!--&lt;!&ndash;                    info@alexanderfarrell.com&ndash;&gt;-->
+<!--&lt;!&ndash;                </a>&ndash;&gt;-->
+<!--            </div>-->
+<!--            <div class="Pad">-->
+<!--                <h3 style="padding-top: 0.8em">Alexander Farrell</h3>-->
+<!--                <p>Hello, my name is Alexander Farrell. I help people develop talents through lessons, articles and games. </p>-->
+<!--&lt;!&ndash;                <p>The purpose of this website is to provide lessons, articles and games which do this. Below are statistics I will keep to measure overtime and to stay accountable to the world in accomplishing this goal.</p>&ndash;&gt;-->
+<!--                <p>Thank you for visiting my site, and I hope I can provide value to you.</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="Category">-->
+<!--        <div style="padding-top: 3vh; padding-bottom: 3vh;">-->
+<!--            <h1>Work</h1>-->
+<!--        </div>-->
+<!--        <h2>Games</h2>-->
+<!--        <div class="TwoColumn" style="grid-gap: 20px; grid-template-rows: 1fr; align-items: stretch">-->
+<!--            <a href="https://morphsight.itch.io/orderedenergy">-->
+<!--                <div class="PictureButton">-->
+<!--                    <img src="https://img.itch.zone/aW1hZ2UvODA1NTA2LzQ1ODI1NDEucG5n/original/nvwnb8.png">-->
+<!--                    <div>Ordered Energy by MorphSight</div>-->
+<!--                </div>-->
+<!--            </a>-->
+<!--            <a href="https://class-project-stock-simulator.herokuapp.com/">-->
+<!--                <div class="PictureButton">-->
+<!--                    <img style="object-fit: cover" src="images/ssim.png">-->
+<!--                    <div>Stock Simulator - Class Project</div>-->
+<!--                </div>-->
+<!--            </a>-->
+<!--        </div>-->
+
+<!--        <h2>Games in Alpha</h2>-->
+<!--        <div class="TwoColumn" style="grid-gap: 20px; grid-template-rows: 1fr; align-items: stretch">-->
+<!--            <a href="/work/raise_triton">-->
+<!--                <div class="PictureButton">-->
+<!--                    <img width="100%" height="52.916%" style="object-fit: cover" src="images/World.png">-->
+<!--                    <div>Raise Triton by MorphSight</div>-->
+<!--                </div>-->
+<!--            </a>-->
+<!--            <a href="/work/buried_peace">-->
+<!--                <div class="PictureButton">-->
+<!--                    <img style="object-fit: cover" src="images/buried.png">-->
+<!--                    <div>Buried Peace</div>-->
+<!--                </div>-->
+<!--            </a>-->
+<!--        </div>-->
+
+<!--        <h2>Art</h2>-->
+<!--        <div class="TwoColumn" style="grid-gap: 20px; grid-template-rows: 1fr; align-items: stretch">-->
+<!--            <a href="/work/space">-->
+<!--                <div class="PictureButton">-->
+<!--                    <img width="100%" height="52.916%" style="object-fit: cover" src="images/space1.jpg">-->
+<!--                    <div>Space</div>-->
+<!--                </div>-->
+<!--            </a>-->
+
+<!--            <a href="/work/fractals">-->
+<!--                <div class="PictureButton">-->
+<!--                    <img style="object-fit: cover" src="images/fractal3.jpg">-->
+<!--                    <div>Fractals</div>-->
+<!--                </div>-->
+<!--            </a>-->
+<!--        </div>-->
+
+<!--        <h2>Games In Development</h2>-->
+<!--        <div class="TwoColumn" style="grid-gap: 20px; grid-template-rows: 1fr; align-items: stretch">-->
+<!--            <a href="/work/void_money">-->
+<!--                <div class="PictureButton">-->
+<!--                    <img width="100%" height="52.916%" style="object-fit: cover" src="https://img.itch.zone/aW1nLzM4OTM3ODEucG5n/original/r%2Bx%2F9A.png">-->
+<!--                    <div>Void Money by MorphSight</div>-->
+<!--                </div>-->
+<!--            </a>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="Category">-->
+<!--        <h3>Languages Over Time</h3>-->
+<!--        <div>-->
+<!--            <figure><embed src="https://wakatime.com/share/@043fa528-533c-4629-8dbc-8b3a99679a86/18b79de5-df8b-4d5f-bfd3-7b2094d51dd2.svg"></embed></figure>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="Category">-->
+<!--        <h3>Editors</h3>-->
+<!--        <div>-->
+<!--            <figure><embed src="https://wakatime.com/share/@043fa528-533c-4629-8dbc-8b3a99679a86/56e476ef-ce4b-4930-b5fc-724d77b02009.svg"></embed></figure>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--<br>-->
 
 
 

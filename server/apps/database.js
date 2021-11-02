@@ -17,17 +17,20 @@ function SetupDatabaseDevelopment(config) {
 }
 exports.SetupDatabaseDevelopment = SetupDatabaseDevelopment;
 function SetupDatabaseProduction() {
-    exports.Data = new Database(process.env.DATABASE_URL, false);
+    exports.Data = new Database(process.env.DATABASE_URL, true);
 }
 exports.SetupDatabaseProduction = SetupDatabaseProduction;
 class Database {
-    constructor(url, rejectUnauthorized = true) {
-        this.Pool = new pg_1.Pool({
+    constructor(url, production = false) {
+        let config = {
             connectionString: url,
-            ssl: {
-                rejectUnauthorized
-            }
-        });
+        };
+        if (production) {
+            config['ssl'] = {
+                rejectUnauthorized: false
+            };
+        }
+        this.Pool = new pg_1.Pool(config);
     }
     static ConstructUri(username, password, host, port, database) {
         return `postgres://${username}:${password}@${host}:${port}/${database}`;

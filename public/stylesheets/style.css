@@ -232,6 +232,13 @@ footer {
   padding: 10px;
 }
 
+.CatButton {
+  background-color: #000031;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
 .HomeNavButton {
   grid-auto-flow: column;
   grid-gap: 5px;
@@ -290,18 +297,76 @@ footer {
 
 #CoursesHome {
   background: radial-gradient(#536093, #293164);
+  padding: 0 5%;
 }
 
 #Home {
-  padding: 15px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto;
-  column-gap: 20px;
-  row-gap: 20px;
-  grid-template-areas: "a a a" "b c d";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
 }
 
+.CoursesAdItem {
+  padding: 1% 0;
+}
+
+.MainMenuScreen {
+  text-align: center;
+  color: white;
+  display: grid;
+  place-items: center;
+  padding: 0 5%;
+}
+
+.mainMid {
+  background: radial-gradient(#0b1c8a, #050617);
+}
+
+.blueMid {
+  background: radial-gradient(#536093, #293164);
+}
+
+.magentaMid {
+  background: radial-gradient(#280ca6, #130749);
+}
+
+.softMid {
+  background: radial-gradient(#a6b0c0, #42424d);
+  color: #cbcbcb !important;
+}
+
+.turquoiseMid {
+  background: radial-gradient(#0c70a6, #06334d);
+}
+
+.MainMenuScreen img {
+  max-width: 40%;
+  object-fit: contain;
+}
+
+.MainMenuScreen, .MainMenuButton {
+  display: grid;
+  padding: 5%;
+  grid-template-rows: 1fr auto auto;
+}
+
+.MainMenuButton img {
+  max-width: 40%;
+  object-fit: contain;
+}
+
+.MainMenuButton {
+  text-align: center;
+  color: white;
+  display: grid;
+  place-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  #Home {
+    grid-template-columns: 1fr;
+  }
+}
 .ContactButton {
   display: grid;
   grid-template-columns: auto 3fr;
