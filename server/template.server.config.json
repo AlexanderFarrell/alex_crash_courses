@@ -1,0 +1,10 @@
+{
+  "port": 3812,
+  "database": {
+    "username": "some_database_user",
+    "password": "some_password",
+    "host": "0.0.0.0",
+    "port": "5432",
+    "database": "some_database"
+  }
+}
