@@ -36,7 +36,9 @@ The Website features four main kinds of projects:
 
 ### Programming Courses
 
-Programming courses give people one-on-one lessons in software creation over video conferencing. It is designed to be a more affordable, powerfully effective and highly adaptable product. It seeks to make getting help in a wide variety of topics easy and accessible to customers, as well as more affordable.
+Programming courses give people one-on-one lessons in software creation over video conferencing. It teaches people more affordably, powerfully and individually how to build software products.  
+
+It is designed to be a more affordable, powerfully effective and highly adaptable product. It seeks to make getting help in a wide variety of topics easy and accessible to customers, as well as more affordable.
 
 Many people find code intimidating. The internet has so many resources available, yet its difficult for people to know where to start. Other options can also be very expensive, and take students through generic instruction. With the Programming Courses Project, the goal is to instead make it more affordable, effective and adaptable to help more people gain specific skills. 
 
