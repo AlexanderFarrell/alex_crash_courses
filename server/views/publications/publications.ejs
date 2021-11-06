@@ -1,0 +1,19 @@
+<div style="display: grid; grid-template-columns: 2fr 1fr">
+    <div>
+        <div id="News">
+            <% for (var i = 0; i < news.length; i++) {%>
+                <%- include('news_button', news[i]) %>
+            <% } %>
+        </div>
+    </div>
+    <div>
+        <div id="Topics">
+            <%- include('link_button', {link: 'Games'}) %>
+            <%- include('link_button', {link: 'Programming'}) %>
+            <%- include('link_button', {link: 'Game Development'}) %>
+            <%- include('link_button', {link: 'Journal'}) %>
+            <%- include('link_button', {link: 'Art'}) %>
+        </div>
+    </div>
+</div>
+

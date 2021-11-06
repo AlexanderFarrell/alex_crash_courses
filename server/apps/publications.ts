@@ -14,7 +14,10 @@ export class Publications implements App {
 
     SetupRoutes(app: e.Application) {
         app.get('/pub', async (req, res) => {
-            RenderPage(res, 'Pages', 'publications/publications.ejs', {});
+            RenderPage(res,
+                'Pages',
+                'publications/publications.ejs',
+                {news: await Publications.GetNews()});
         })
 
         app.get(`/pub/:name`, async (req, res) => {
@@ -38,6 +41,17 @@ export class Publications implements App {
             and title=$1
             limit 1`,
             name
+        )).rows;
+    }
+
+    private static async GetNews() {
+        return (await Data.Query(
+            `select i.title as title, i.description as description, to_char(i.created_on, 'Mon DD, YYYY')  as date
+            from item i
+            inner join page p on i.id = p.item_id
+            where item_type='page'
+            order by i.created_on
+            limit 3`
         )).rows;
     }
 }
