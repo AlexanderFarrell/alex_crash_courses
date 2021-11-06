@@ -20,6 +20,7 @@ export class Clients extends RouteNode {
             }
         )
 
+
         TryRenderRoute(
             app,
             `${parent_route}/games/:name`,
