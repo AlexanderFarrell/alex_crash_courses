@@ -1,12 +1,13 @@
 import {SetupIndexApi} from "./routes";
 import {PaServer} from "./PaServer";
+import {Publications} from "./apps/publications";
+import {NotFound} from "./apps/not_found";
 
 const server = new PaServer();
 
 SetupIndexApi(server.Express);
 
-server.Use((req, res, next) => {
-    res.render('template', { title: 'Not Found' + " - Alexander Farrell", content: 'pages/not_found.ejs'})
-})
+server.Start(new Publications());
+server.Start(new NotFound());
 
 server.Run();

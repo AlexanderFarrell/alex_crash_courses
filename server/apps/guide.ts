@@ -133,7 +133,8 @@ export class Guide extends RouteNode {
                 from item 
                 inner join item_item_link iil on item.id = iil.item_id_two
                 where item_type='unit' 
-                and item_id_one=(select id from item where title=$1)`,
+                and item_id_one=(select id from item where title=$1)
+                limit 120`,
             class_name)).rows;
     }
 
@@ -153,7 +154,8 @@ export class Guide extends RouteNode {
             from item i
             inner join page p on i.id = p.item_id
             where item_type='lesson'
-            and title=$1`,
+            and title=$1
+            limit 1`,
             lesson_name
         )).rows;
     }

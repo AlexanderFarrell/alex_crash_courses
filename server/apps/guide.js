@@ -148,7 +148,8 @@ class Guide extends route_1.RouteNode {
                 from item 
                 inner join item_item_link iil on item.id = iil.item_id_two
                 where item_type='unit' 
-                and item_id_one=(select id from item where title=$1)`, class_name)).rows;
+                and item_id_one=(select id from item where title=$1)
+                limit 120`, class_name)).rows;
         });
     }
     GetLessons(unit_name) {
@@ -166,7 +167,8 @@ class Guide extends route_1.RouteNode {
             from item i
             inner join page p on i.id = p.item_id
             where item_type='lesson'
-            and title=$1`, lesson_name)).rows;
+            and title=$1
+            limit 1`, lesson_name)).rows;
         });
     }
 }

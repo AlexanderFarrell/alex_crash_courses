@@ -1,0 +1,1 @@
+call add_page('Test', 'This works!', '<p>This is a test of a publication page.</p><p>Hopefully this works!</p>', 'page');

@@ -12,6 +12,7 @@ const enforce = require("express-sslify");
 class PaServer {
     constructor() {
         const runtime_mode = process.env.RUNTIME_MODE || 'development';
+        this.Apps = new Map();
         this.Express = express();
         this.Express.set('views', path.join(__dirname, 'views'));
         this.Express.set('view engine', 'ejs');
@@ -39,10 +40,19 @@ class PaServer {
                 break;
         }
     }
+    Start(app) {
+        this.Apps.set(app.GetName(), app);
+        console.log(`Setting Up App: ${app.GetName()}`);
+        app.SetupModule(this.Express);
+        console.log(`\t App "${app.GetName()}" is running.`);
+    }
     Use(on) {
         this.Express.use(on);
     }
     Run() {
+        this.Apps.forEach((app, key) => {
+            app.SetupRoutes(this.Express);
+        });
         const port = process.env.PORT || 3000;
         this.Express.listen(port, () => {
             console.log(`Listening on ${port}`);

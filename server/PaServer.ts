@@ -9,12 +9,16 @@ import * as cookieParser from "cookie-parser";
 import * as logger from 'morgan';
 import * as helmet from "helmet";
 import * as enforce from 'express-sslify';
+import {App} from "./apps/app";
 
 export class PaServer {
     public Express: Application;
+    public Apps: Map<string, App>;
 
     constructor() {
         const runtime_mode = process.env.RUNTIME_MODE || 'development';
+
+        this.Apps = new Map<string, App>();
 
         this.Express = express();
         this.Express.set('views', path.join(__dirname, 'views'));
@@ -51,11 +55,22 @@ export class PaServer {
         }
     }
 
+    Start(app: App) {
+        this.Apps.set(app.GetName(), app);
+        console.log(`Setting Up App: ${app.GetName()}`);
+        app.SetupModule(this.Express);
+        console.log(`\t App "${app.GetName()}" is running.`)
+    }
+
     Use(on: (req, res, next) => void){
         this.Express.use(on);
     }
 
     Run() {
+        this.Apps.forEach((app, key) => {
+            app.SetupRoutes(this.Express);
+        })
+
         const port = process.env.PORT || 3000;
         this.Express.listen(port, () => {
             console.log(`Listening on ${port}`);
