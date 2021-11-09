@@ -1,282 +1,298 @@
+<%
+    var categories = [
+        {
+            name: "Get Started with Programming",
+            url: "HowDoI"
+        },
+        {
+            name: "Learn a Language",
+            url: "LanguageCourses"
+        },
+        {
+            name: "Get Tutoring",
+            url: "Tutoring"
+        },
+        {
+            name: "Need Something Specific?",
+            url: "Help"
+        }
+    ]
+
+var how_do_i = [
+    {
+        verb: "Build Websites",
+        name: "Web Programming Course",
+        icon: "/images/marbles/hi/d.png",
+        page: "",
+        desc: "Form your piece of the internet.",
+        background: "rgb(67,109,225)",
+        title_color: "rgb(183,231,255)"
+    },
+    {
+        verb: "Build Games",
+        name: "Game Programming Course",
+        icon: "/images/marbles/hi/d.png",
+        page: "",
+        desc: "Craft virtual worlds. ",
+        background: "rgb(136,36,36)",
+        title_color: "rgb(255,166,166)"
+    },
+    {
+        verb: "Build Apps",
+        name: "Application Programming Course",
+        icon: "/images/marbles/hi/d.png",
+        page: "",
+        desc: "Bring about useful tools.",
+        background: "rgb(32,124,78)",
+        title_color: "rgb(170,255,220)"
+    },
+    {
+        verb: "Build Servers",
+        name: "Server Programming Course",
+        icon: "/images/marbles/hi/d.png",
+        page: "",
+        desc: "Connect devices together.",
+        background: "rgb(111,59,117)",
+        title_color: "rgb(251,146,255)"
+    },
+    {
+        verb: "Build Databases",
+        name: "Database Programming Course",
+        icon: "/images/marbles/hi/d.png",
+        page: "",
+        desc: "Store, search & maintain information.",
+        background: "rgb(131,89,67)",
+        title_color: "rgb(255,195,148)"
+    }]
+
+var languages = [
+    {
+        name: "Python",
+        icon: "/images/marbles/hi/d.png",
+        logo: "/images/lang/python.svg",
+        logo_i: "devicon-python-plain",
+        page: "",
+        desc: "Learn fast. Tools built-in.",
+        i_color: "hsl(0,0%,100%)",
+        background: "rgb(0,50,175)",
+        title_color: "rgb(193,238,255)"
+    },
+    {
+        name: "JavaScript",
+        icon: "/images/marbles/hi/d.png",
+        logo: "/images/lang/javascript.svg",
+        logo_i: "devicon-javascript-plain",
+        desc: "Build powerful websites & more",
+        i_color: "hsl(359,100%,100%)",
+        background: "rgb(122,112,0)",
+        title_color: "rgb(254,255,212)"
+    },
+    {
+        name: "Kotlin",
+        icon: "/images/marbles/hi/d.png",
+        logo: "/images/lang/kotlin.svg",
+        logo_i: "devicon-kotlin-plain",
+        desc: "Build powerful apps with JVM",
+        i_color: "hsl(359,100%,100%)",
+        background: "rgb(26,26,26)",
+        title_color: "rgb(255,255,255)"
+    },
+    {
+        name: "Java",
+        icon: "/images/marbles/hi/d.png",
+        logo: "/images/lang/java.svg",
+        logo_i: "devicon-java-plain",
+        page: "",
+        desc: "Build powerful apps with JVM",
+        i_color: "hsl(359,100%,100%)",
+        background: "rgb(26,26,26)",
+        title_color: "rgb(255,255,255)"
+    },
+    {
+        name: "C#",
+        icon: "/images/marbles/hi/d.png",
+        logo: "/images/lang/csharp.svg",
+        logo_i: "devicon-csharp-plain",
+        desc: "Enjoy powerful capabilities from .NET",
+        i_color: "hsl(359,100%,100%)",
+        background: "rgb(46,0,61)",
+        title_color: "rgb(250,195,255)"
+    },
+    {
+        name: "C++",
+        icon: "/images/marbles/hi/d.png",
+        logo: "/images/lang/cplusplus.svg",
+        logo_i: "devicon-cplusplus-plain",
+        page: "",
+        desc: "Build powerful apps.",
+        i_color: "hsl(359,100%,100%)",
+        background: "rgb(80,0,19)",
+        title_color: "rgb(255,148,185)"
+    },
+    {
+        name: "HTML",
+        icon: "/images/marbles/hi/d.png",
+        logo: "/images/lang/html.svg",
+        logo_i: "devicon-html5-plain",
+        page: "",
+        desc: "Layout web pages & more.",
+        i_color: "hsl(359,100%,100%)",
+        background: "rgb(93,36,0)",
+        title_color: "rgb(255,228,213)"
+    },
+    {
+        name: "CSS",
+        icon: "/images/marbles/hi/d.png",
+        logo: "/images/lang/css.svg",
+        logo_i: "devicon-css3-plain",
+        page: "",
+        desc: "Style web pages.",
+        i_color: "hsl(359,100%,100%)",
+        background: "rgb(0,34,86)",
+        title_color: "rgb(186,218,255)"
+    },
+    {
+        name: "Rust",
+        icon: "/images/marbles/hi/d.png",
+        logo: "/images/lang/rust.svg",
+        logo_i: "devicon-rust-plain",
+        page: "",
+        desc: "Build powerful apps. ",
+        i_color: "hsl(359,100%,100%)",
+        background: "rgb(134,61,0)",
+        title_color: "rgb(255,195,148)"
+    },
+    {
+        name: "SQL & Postgres",
+        icon: "/images/marbles/hi/d.png",
+        logo: "/images/lang/postgresql.svg",
+        logo_i: "devicon-postgresql-plain",
+        page: "",
+        desc: "Work powerfully with data.",
+        i_color: "hsl(359,100%,100%)",
+        background: "rgb(36,0,107)",
+        title_color: "rgb(255,195,148)"
+    },
+    {
+        name: "PHP",
+        icon: "/images/marbles/hi/d.png",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+        logo_i: "devicon-php-plain",
+        page: "",
+        desc: "Servers simplified",
+        background: "rgb(131,67,128)",
+        title_color: "rgb(255,195,148)"
+    }
+]
+
+    function Repeat(num, str) {
+        var retVal = [];
+        for (var i = 0; i < num; i++) {
+            retVal.push(str)
+        }
+        return retVal.join(" ");
+    }
+%>
+
 <style>
-    /*img {*/
-    /*    min-height: 100%;*/
-    /*}*/
-    img {
-        border-radius: 10px;
+    .CourseItem {
+        color: white;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-gap: 10px;
+        padding: 1.5rem;
+        height: 100%;
+    }
+    .CoursesContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 5px;
+        grid-gap: 5px;
+    }
+    .CourseDetails {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
     }
 
-    /*@media*/
-    /*(-webkit-min-device-pixel-ratio: 2),*/
-    /*(min-resolution: 192dpi) {*/
-    /*    #MainItem {*/
-    /*        grid-template-columns: 1fr;*/
-    /*        width: 90%;*/
-    /*        transition: 0.2s;*/
-    /*        padding: 0;*/
-    /*    }*/
-    /*    #MainItemInfo {*/
-    /*        width: 70%;*/
-    /*        font-size: small;*/
-    /*        padding: 0;*/
-    /*    }*/
-    /*    #MainItemLogo {*/
-    /*        padding: 10%;*/
-    /*    }*/
-    /*    #MainItemDetails {*/
-    /*        font-size: 1rem;*/
-    /*    }*/
-    /*}*/
-
+    @media only screen and (max-width: 800px) {
+        .CoursesContainer {
+            grid-template-columns: 1fr;
+        }
+    }
 </style>
 
-<div style="padding: 0 0">
-    <div id="MainItem">
-        <div id="MainItemInfo">
-            <div>
-                <h1 id="MainItemTitle">Learn to <span class="accent" style="grid-column: 2">Code</span></h1>
-            </div>
-            <div id="MainItemDetails">Offering one-on-one programming courses for $25 an hour. Conquer several languages. Build apps, games and websites. </div>
-            <a style="width: 100%; text-align: center" class="Scream" href="courses#start">
-                Schedule
-            </a>
-        </div>
-        <div id="MainItemLogo">
-            <img src="/images/marbles/hi/courses.png">
-            <!--                <h2>One-on-One</h2><h4>Crash Courses</h4>-->
-        </div>
+<div>
+    Enjoy one-on-one lessons over zoom. $25 per hour, or $45 for two hours.
+</div>
+<a href="<%= categories[0].page%>">
+    <div style="color: white; text-align: center">
+        <div><%= categories[0].name %></div>
+        <div><%= categories[0].desc%></div>
     </div>
-<!--    <div style="padding: 0 0">-->
-
-<!--        <p>My name is Alexander Farrell, and I offer convenient and effective crash courses in programming over Zoom. </p>-->
-<!--        <p>I would love to help you build Apps, Games, and Websites! Please contact me, or schedule conveniently online to begin or continue learning. </p>-->
-<!--    </div>-->
-
-
-<!--    <div class="TwoColumn" style="justify-items: center; justify-content: center;">-->
-<!--        <div>-->
-<!--            <a href="tel:949-750-6480">-->
-<!--                <div class="Icon" style="text-align: center">📱</div>-->
-<!--            </a>-->
-<!--            <a href="courses/one_hour">-->
-<!--            </a>-->
-<!--            <a href="mailto: courses@alexanderfarrell.com">-->
-<!--            </a>-->
-<!--            <a href="courses/two_hour">-->
-<!--            </a>-->
-<!--        </div>-->
-<!--        <div>-->
-<!--        </div>-->
-<!--    </div>-->
-    <br>
-    <div class="StretchWidth" style="background: hsl(230,38%,36%)">
-        <div class="ContentItem" style="padding-top: 1rem">
-            <div class="Benefit BenefitR">
-                <h3 class="BenefitTitle">Learn How to Build Apps, Games and Websites</h3>
-                <div class="BenefitImage">
-                    <img src="images/auth.png">
-                </div>
-                <div class="BenefitDescription">Start your portfolio of software projects. Learn how to plan, design, create, test and even deploy/publish your own projects! Get one-on-one help. </div>
+</a>
+<div style="display: grid; text-align: center; grid-template-columns: <%- Repeat(categories.length - 1, "1fr")%>">
+    <% for (var i = 1; i < categories.length; i++) { %>
+        <a href="<%= categories[i].page%>">
+            <div style="color: white;">
+                <div><%= categories[i].name %></div>
+                <div><%= categories[i].desc%></div>
             </div>
-            <div class="Benefit BenefitR">
-                <h3 class="BenefitTitle">Cover Fundamentals</h3>
-                <div class="BenefitImage">
-                    <img src="images/code.png">
-                </div>
-                <div class="BenefitDescription">Learn concepts in computer programming. <span class="accent">Gain confidence with code.</span> </div>
-            </div>
-<!--            <div class="Benefit BenefitR">-->
-<!--                <h3 class="BenefitTitle">Enjoy One-on-One Help</h3>-->
-<!--                <div class="BenefitImage">-->
-<!--                    <img src="images/food.png">-->
-<!--                </div>-->
-<!--                <div class="BenefitDescription">My students can ask questions, and I adapt the courses to them. I believe in my students, and want to see their brilliant talents flourish. </div>-->
-<!--            </div>-->
-<!--            <div class="Benefit BenefitR">-->
-<!--                <h3 class="BenefitTitle">Learn & Use Several Technologies</h3>-->
-<!--                <div class="BenefitImage">-->
-<!--                    <img src="images/pack.png">-->
-<!--                </div>-->
-<!--                <div class="BenefitDescription">My students learn several technologies such as Databases, Web Browsers, Servers, Version Control, Shaders, NPM, NodeJS, Unity and more during their courses.        </div>-->
-<!--            </div>-->
-        </div>
-    </div>
-
-<!--    <br>-->
-<!--    <br>-->
-<!--    <h3>Learn & Use Several Languages</h3>-->
-<!--    <p>My students learn several languages such as Python, JavaScript, HTML, CSS, SQL, JSON, C#, GLSL and more during their courses. We will explore derivative languages such as SCSS and TypeScript. </p>-->
-<!--    <img width="100%" style="border-radius: 20px;" src="images/code.png">-->
-<!--    <br>-->
-<!--    <br>-->
-<!--    <h3>Get One-on-One Help</h3>-->
-<!--    <p>My students can ask questions, and I adapt the courses to them. I believe in my students, and want to see their brilliant talents flourish. </p>-->
-<!--    <img width="100%" style="border-radius: 20px;" src="images/food.png">-->
-<!--    <br>-->
-<!--    <br>-->
-<!--    <h3>Learn & Use Several Technologies</h3>-->
-<!--    <p>My students learn several technologies such as Databases, Web Browsers, Servers, Version Control, Shaders, NPM, NodeJS, Unity and more during their courses. </p>-->
-<!--    <img width="100%" style="border-radius: 20px;" src="images/pack.png">-->
-<!--    <br>-->
-<!--    <br>-->
-
-
-    <br>
-    <div id="Languages">
-        <h1>Dive Into Several Topics</h1>
-        <p>Cover several powerful and popular technologies to code websites, servers, statistics projects, games, databases and more. </p>
-        <div id="LanguagesContainer">
-            <% for (var i = 0; i < languages.length; i++) { %>
-                <div class="LanguageIcon">
-                    <%- languages[i].icon%>
-                    <div><%= languages[i].name%></div>
-                </div>
-            <%}%>
-        </div>
-    </div>
-<!--    <p>-->
-<!--        If you don't see what you're looking for, let's get in <a href="#start">contact</a>.-->
-<!--    </p>-->
-<!--    <div id="Technologies">-->
-<!--        <h1>Learn Several Languages</h1>-->
-<!--        <div id="TechnologiesContainer">-->
-<!--            <% for (var i = 0; i < languages.length; i++) { %>-->
-<!--                <div class="TechnologyIcon">-->
-<!--                    <%- languages[i].icon%>-->
-<!--                    <div><%= languages[i].name%></div>-->
-<!--                </div>-->
-<!--            <%}%>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="StretchWidth" style="background: hsl(230,38%,36%)">-->
-<!--        <br>-->
-<!--        <div id="Lessn" class="ContentItem">-->
-<!--            <div class="Less">-->
-<!--                <div class="Icon">🗓</div>-->
-<!--                <h3>Schedule at Your Leisure</h3>-->
-<!--                <div>Set up a regular meeting, or schedule each meeting individually.</div>-->
-<!--            </div>-->
-<!--            <div class="Less">-->
-<!--                <div class="Icon">🗓</div>-->
-<!--                <h3>Lessons Tailored for You</h3>-->
-<!--                <div>Everyone learns differently, and has different interests. Each lesson is adapted to you.</div>-->
-<!--            </div>-->
-<!--            <div class="Less">-->
-<!--                <div class="Icon">🗓</div>-->
-<!--                <h3>Navigate Computer Programming</h3>-->
-<!--                <div>If you have questions about where to start, <a href="#start">let's get in touch for free! </a></div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="ContentItem">-->
-<!--            <div class="Benefit BenefitR">-->
-<!--                <h3 class="BenefitTitle">Schedule at Your Leisure</h3>-->
-<!--                <div class="BenefitImage">-->
-<!--                    <div class="Icon">🗓</div>-->
-<!--                </div>-->
-<!--                <div class="BenefitDescription">Set up a regular meeting, or schedule each meeting individually. </div>-->
-<!--            </div>-->
-<!--        </div>-->
-    <div class="StretchWidth" style="background: hsl(230,38%,36%)">
-        <br>
-        <div class="ContentItem">
-            <div class="TwoColumn" style="place-items: center; grid-gap: 40px">
-                <h2>Beginners Welcome</h2>
-                <div>New to programming? No prior knowledge required! Feel free to schedule a course and we will get started! </div>
-                <h2>Need Something Specific?</h2>
-                <div>Get one-on-one help learning any of the frameworks/languages above. Feel free to get in touch about any special requests.</div>
-                <h2>Schedule at Your Leisure</h2>
-                <div>Call, email or book online. Feel free to get in touch if you'd like to set up a regular time. </div>
-            </div>
-        </div>
-        <br>
-    </div>
-    <div id="start" style="height: 70px !important;">&nbsp;</div>
-    <div id="GetStarted">
-        <div>
-            <h1>Let's Get <span class="accent" >Started</span></h1>
-            <h2>With Your First Course</h2>
-            <img id="GetStartedLogo" src="/images/marbles/hi/courses.png">
-        </div>
-        <div id="GetStartedButtons">
-            <a href="tel:714-794-5693" class="ContactButton Scream">
-                <div style="text-align: center" class="SmallIcon">📱</div>
-                <div style="text-align: center; font-size: 1rem">
-                    <h3 class="ContactTitle">Call or Text</h3>
-                    <div>(714) 794-5693</div>
+        </a>
+    <% } %>
+</div>
+<div></div>
+<div id="HowDoI" style="background-color: #000031">
+    <h1>Let's Begin</h1>
+    <div style="text-align: center">Let's pick something which interests you.</div>
+    <div class="CoursesContainer" style="grid-template-rows: 1fr 1fr 1fr;">
+        <% for (var i = 0; i < how_do_i.length; i++) { %>
+            <a href="<%= how_do_i[i].page%>">
+                <div class="CourseItem" style="background: <%- how_do_i[i].background%>;">
+                    <img style="filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.91)); -webkit-filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.83))" src="<%= how_do_i[i].icon%>">
+                    <div class="CourseDetails">
+                        <div style="font-size: 1.5rem; font-weight: lighter; color: <%- how_do_i[i].title_color%>"><%= how_do_i[i].verb%></div>
+                        <div class="RegText"><%= how_do_i[i].desc%></div>
+                        <div style="font-size: 0.7rem; font-weight: lighter"><%= how_do_i[i].name %></div>
+                    </div>
                 </div>
             </a>
-            <a href="mailto: courses@alexanderfarrell.com" class="ContactButton Scream">
-                <div style="text-align: center" class="SmallIcon">✉️</div>
-                <div style="text-align: center; font-size: 0.8rem">
-                    <h3 class="ContactTitle">Send Email</h3>
-                    <div>courses@alexanderfarrell.com</div>
-                </div>
-            </a>
-<!--            <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/alexander-crash-courses/1-hour-lesson?background_color=000827&text_color=ffffff&primary_color=ac0053'}); return false" class="ContactButton Scream"-->
-            <a href="https://calendly.com/alexander-crash-courses/1-hour-lesson" class="ContactButton Scream">
-                <div style="text-align: center" class="SmallIcon">🕐</div>
-                <div style="text-align: center; font-size: 1rem">
-                    <h3 class="ContactTitle">Book Online</h3>
-                    <div>One Hour Course</div>
-                </div>
-            </a>
-        </div>
+        <% } %>
     </div>
+</div>
+<div id="Languages_1">
+    <h1>Learn a Language</h1>
+    <div style="text-align: left">Offering one-on-one courses in these languages.</div>
+    <div class="CoursesContainer" style="">
+        <% for (var i = 0; i < languages.length; i++) { %>
+            <a href="<%= languages[i].page%>">
+                <div class="CourseItem" style="background: <%= languages[i].background%> ">
+                    <div style="text-align: center">
+                        <div>
+                            <i style="font-size: 3rem; color: <%= languages[i].i_color%>" class="<%= languages[i].logo_i%>"></i>
+                            <div>
+<!--                                <img  style="filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.91)); -webkit-filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.83))"  src="<%= languages[i].logo%>">-->
 
+                            </div>
+                        </div>
+                        <div style="font-size: 0.7rem;">
+                            <%= languages[i].name %>
 
+                        </div>
+                    </div>
 
-<!--    </div>-->
-<!--    <div>-->
-<!--    </div>-->
-<!--    <div>-->
-
-<!--    </div>-->
-<!--    <h3>Schedule</h3>-->
-
-
-
-<!--    <div> &lt;!&ndash;style="/*display: grid; place-content: space-between; grid-column-gap: 20px;  !*width: 80%;*! margin-left: auto; margin-right: auto*/"&ndash;&gt;-->
-<!--        <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/alexander-crash-courses/1-hour-lesson?background_color=000827&text_color=ffffff&primary_color=ac0053'});return false;" class="">-->
-<!--            &lt;!&ndash;            <div style="text-align: center" class="Icon">🕐</div>&ndash;&gt;-->
-
-<!--            <img class="CourseIcon" src="courses.png">-->
-<!--            <div style="text-align: center">One Hour Course</div>-->
-<!--            <div style="text-align: center"> $25</div>-->
-<!--        </a>-->
-<!--&lt;!&ndash;        <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/alexander-crash-courses/2-hour-lesson?background_color=000827&text_color=ffffff&primary_color=ac0053'});return false;" class="Scream">&ndash;&gt;-->
-<!--&lt;!&ndash;            <div>&ndash;&gt;-->
-<!--&lt;!&ndash;                <img class="CourseIcon" src="courses.png">&ndash;&gt;-->
-<!--&lt;!&ndash;            </div>&ndash;&gt;-->
-<!--&lt;!&ndash;            &lt;!&ndash;            <div style="text-align: center;" class="Icon">🕑</div>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;            <div style="text-align: center">Two Hour Course</div>&ndash;&gt;-->
-<!--&lt;!&ndash;            <div style="text-align: center">$45</div>&ndash;&gt;-->
-<!--&lt;!&ndash;        </a>&ndash;&gt;-->
-<!--    </div>-->
-<!--    <div id="Extra">-->
-<!--        <a href="/courses/prepare" class="Button">-->
-<!--            <h2>Prepare</h2>-->
-<!--            <p>What obstacles may someone encounter while learning?</p>-->
-<!--        </a>-->
-<!--&lt;!&ndash;        <a href="/courses/languages" class="Scream">&ndash;&gt;-->
-<!--&lt;!&ndash;            <h2>Pick a Language</h2>&ndash;&gt;-->
-<!--&lt;!&ndash;            <p>How does one get started on their own?</p>&ndash;&gt;-->
-<!--&lt;!&ndash;        </a>&ndash;&gt;-->
-<!--&lt;!&ndash;        <a href="/courses/ideas" class="Scream">&ndash;&gt;-->
-<!--&lt;!&ndash;            <h2>Project Ideas</h2>&ndash;&gt;-->
-<!--&lt;!&ndash;            <p>Do you have ideas for someone's next apps, website or game?</p>&ndash;&gt;-->
-<!--&lt;!&ndash;        </a>&ndash;&gt;-->
-<!--&lt;!&ndash;        <a href="/courses/curriculum" class="Scream">&ndash;&gt;-->
-<!--&lt;!&ndash;            <h2>Explore Curriculum</h2>&ndash;&gt;-->
-<!--&lt;!&ndash;            <p>What specifically do the courses teach?</p>&ndash;&gt;-->
-<!--&lt;!&ndash;        </a>&ndash;&gt;-->
-<!--        <a href="/courses/guide" class="Button">-->
-<!--            <h2>Tutorials</h2>-->
-<!--            <p>Do you have tutorials online? </p>-->
-<!--        </a>-->
-<!--&lt;!&ndash;        <a href="/courses/philosophy" class="Scream">&ndash;&gt;-->
-<!--&lt;!&ndash;            <h2>Philosophy</h2>&ndash;&gt;-->
-<!--&lt;!&ndash;            <p>How do you teach? </p>&ndash;&gt;-->
-<!--&lt;!&ndash;        </a>&ndash;&gt;-->
-<!--    </div>-->
-
+                    <div class="CourseDetails">
+                        <div style="font-size: 1.5rem; font-weight: lighter; color: <%= /*languages[i].title_color*/%>"><%= languages[i].name %> Course</div>
+<!--                        <div class="RegText"><%= languages[i].desc%></div>-->
+<!--                        <div style="font-size: 0.7rem; font-weight: lighter"><%= languages[i].name %> Courses</div>-->
+                    </div>
+                </div>
+            </a>
+        <% } %>
+    </div>
+</div>
+<div id="Tutoring">
+    <h1>Tutoring Available</h1>
+</div>
+<div id="Get Help">
+    <h1>Get Help</h1>
 </div>

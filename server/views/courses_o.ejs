@@ -1,0 +1,282 @@
+<style>
+    /*img {*/
+    /*    min-height: 100%;*/
+    /*}*/
+    img {
+        border-radius: 10px;
+    }
+
+    /*@media*/
+    /*(-webkit-min-device-pixel-ratio: 2),*/
+    /*(min-resolution: 192dpi) {*/
+    /*    #MainItem {*/
+    /*        grid-template-columns: 1fr;*/
+    /*        width: 90%;*/
+    /*        transition: 0.2s;*/
+    /*        padding: 0;*/
+    /*    }*/
+    /*    #MainItemInfo {*/
+    /*        width: 70%;*/
+    /*        font-size: small;*/
+    /*        padding: 0;*/
+    /*    }*/
+    /*    #MainItemLogo {*/
+    /*        padding: 10%;*/
+    /*    }*/
+    /*    #MainItemDetails {*/
+    /*        font-size: 1rem;*/
+    /*    }*/
+    /*}*/
+
+</style>
+
+<div style="padding: 0 0">
+    <div id="MainItem">
+        <div id="MainItemInfo">
+            <div>
+                <h1 id="MainItemTitle">Learn to <span class="accent" style="grid-column: 2">Code</span></h1>
+            </div>
+            <div id="MainItemDetails">Offering one-on-one programming courses for $25 an hour. Conquer several languages. Build apps, games and websites. </div>
+            <a style="width: 100%; text-align: center" class="Scream" href="courses#start">
+                Schedule
+            </a>
+        </div>
+        <div id="MainItemLogo">
+            <img src="/images/marbles/hi/courses.png">
+            <!--                <h2>One-on-One</h2><h4>Crash Courses</h4>-->
+        </div>
+    </div>
+<!--    <div style="padding: 0 0">-->
+
+<!--        <p>My name is Alexander Farrell, and I offer convenient and effective crash courses in programming over Zoom. </p>-->
+<!--        <p>I would love to help you build Apps, Games, and Websites! Please contact me, or schedule conveniently online to begin or continue learning. </p>-->
+<!--    </div>-->
+
+
+<!--    <div class="TwoColumn" style="justify-items: center; justify-content: center;">-->
+<!--        <div>-->
+<!--            <a href="tel:949-750-6480">-->
+<!--                <div class="Icon" style="text-align: center">📱</div>-->
+<!--            </a>-->
+<!--            <a href="courses/one_hour">-->
+<!--            </a>-->
+<!--            <a href="mailto: courses@alexanderfarrell.com">-->
+<!--            </a>-->
+<!--            <a href="courses/two_hour">-->
+<!--            </a>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--        </div>-->
+<!--    </div>-->
+    <br>
+    <div class="StretchWidth" style="background: hsl(230,38%,36%)">
+        <div class="ContentItem" style="padding-top: 1rem">
+            <div class="Benefit BenefitR">
+                <h3 class="BenefitTitle">Learn How to Build Apps, Games and Websites</h3>
+                <div class="BenefitImage">
+                    <img src="images/auth.png">
+                </div>
+                <div class="BenefitDescription">Start your portfolio of software projects. Learn how to plan, design, create, test and even deploy/publish your own projects! Get one-on-one help. </div>
+            </div>
+            <div class="Benefit BenefitR">
+                <h3 class="BenefitTitle">Cover Fundamentals</h3>
+                <div class="BenefitImage">
+                    <img src="images/code.png">
+                </div>
+                <div class="BenefitDescription">Learn concepts in computer programming. <span class="accent">Gain confidence with code.</span> </div>
+            </div>
+<!--            <div class="Benefit BenefitR">-->
+<!--                <h3 class="BenefitTitle">Enjoy One-on-One Help</h3>-->
+<!--                <div class="BenefitImage">-->
+<!--                    <img src="images/food.png">-->
+<!--                </div>-->
+<!--                <div class="BenefitDescription">My students can ask questions, and I adapt the courses to them. I believe in my students, and want to see their brilliant talents flourish. </div>-->
+<!--            </div>-->
+<!--            <div class="Benefit BenefitR">-->
+<!--                <h3 class="BenefitTitle">Learn & Use Several Technologies</h3>-->
+<!--                <div class="BenefitImage">-->
+<!--                    <img src="images/pack.png">-->
+<!--                </div>-->
+<!--                <div class="BenefitDescription">My students learn several technologies such as Databases, Web Browsers, Servers, Version Control, Shaders, NPM, NodeJS, Unity and more during their courses.        </div>-->
+<!--            </div>-->
+        </div>
+    </div>
+
+<!--    <br>-->
+<!--    <br>-->
+<!--    <h3>Learn & Use Several Languages</h3>-->
+<!--    <p>My students learn several lang such as Python, JavaScript, HTML, CSS, SQL, JSON, C#, GLSL and more during their courses. We will explore derivative lang such as SCSS and TypeScript. </p>-->
+<!--    <img width="100%" style="border-radius: 20px;" src="images/code.png">-->
+<!--    <br>-->
+<!--    <br>-->
+<!--    <h3>Get One-on-One Help</h3>-->
+<!--    <p>My students can ask questions, and I adapt the courses to them. I believe in my students, and want to see their brilliant talents flourish. </p>-->
+<!--    <img width="100%" style="border-radius: 20px;" src="images/food.png">-->
+<!--    <br>-->
+<!--    <br>-->
+<!--    <h3>Learn & Use Several Technologies</h3>-->
+<!--    <p>My students learn several technologies such as Databases, Web Browsers, Servers, Version Control, Shaders, NPM, NodeJS, Unity and more during their courses. </p>-->
+<!--    <img width="100%" style="border-radius: 20px;" src="images/pack.png">-->
+<!--    <br>-->
+<!--    <br>-->
+
+
+    <br>
+    <div id="Languages">
+        <h1>Dive Into Several Topics</h1>
+        <p>Cover several powerful and popular technologies to code websites, servers, statistics projects, games, databases and more. </p>
+        <div id="LanguagesContainer">
+            <% for (var i = 0; i < languages.length; i++) { %>
+                <div class="LanguageIcon">
+                    <%- languages[i].icon%>
+                    <div><%= languages[i].name%></div>
+                </div>
+            <%}%>
+        </div>
+    </div>
+<!--    <p>-->
+<!--        If you don't see what you're looking for, let's get in <a href="#start">contact</a>.-->
+<!--    </p>-->
+<!--    <div id="Technologies">-->
+<!--        <h1>Learn Several Languages</h1>-->
+<!--        <div id="TechnologiesContainer">-->
+<!--            <% for (var i = 0; i < languages.length; i++) { %>-->
+<!--                <div class="TechnologyIcon">-->
+<!--                    <%- languages[i].icon%>-->
+<!--                    <div><%= languages[i].name%></div>-->
+<!--                </div>-->
+<!--            <%}%>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="StretchWidth" style="background: hsl(230,38%,36%)">-->
+<!--        <br>-->
+<!--        <div id="Lessn" class="ContentItem">-->
+<!--            <div class="Less">-->
+<!--                <div class="Icon">🗓</div>-->
+<!--                <h3>Schedule at Your Leisure</h3>-->
+<!--                <div>Set up a regular meeting, or schedule each meeting individually.</div>-->
+<!--            </div>-->
+<!--            <div class="Less">-->
+<!--                <div class="Icon">🗓</div>-->
+<!--                <h3>Lessons Tailored for You</h3>-->
+<!--                <div>Everyone learns differently, and has different interests. Each lesson is adapted to you.</div>-->
+<!--            </div>-->
+<!--            <div class="Less">-->
+<!--                <div class="Icon">🗓</div>-->
+<!--                <h3>Navigate Computer Programming</h3>-->
+<!--                <div>If you have questions about where to start, <a href="#start">let's get in touch for free! </a></div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="ContentItem">-->
+<!--            <div class="Benefit BenefitR">-->
+<!--                <h3 class="BenefitTitle">Schedule at Your Leisure</h3>-->
+<!--                <div class="BenefitImage">-->
+<!--                    <div class="Icon">🗓</div>-->
+<!--                </div>-->
+<!--                <div class="BenefitDescription">Set up a regular meeting, or schedule each meeting individually. </div>-->
+<!--            </div>-->
+<!--        </div>-->
+    <div class="StretchWidth" style="background: hsl(230,38%,36%)">
+        <br>
+        <div class="ContentItem">
+            <div class="TwoColumn" style="place-items: center; grid-gap: 40px">
+                <h2>Beginners Welcome</h2>
+                <div>New to programming? No prior knowledge required! Feel free to schedule a course and we will get started! </div>
+                <h2>Need Something Specific?</h2>
+                <div>Get one-on-one help learning any of the frameworks/languages above. Feel free to get in touch about any special requests.</div>
+                <h2>Schedule at Your Leisure</h2>
+                <div>Call, email or book online. Feel free to get in touch if you'd like to set up a regular time. </div>
+            </div>
+        </div>
+        <br>
+    </div>
+    <div id="start" style="height: 70px !important;">&nbsp;</div>
+    <div id="GetStarted">
+        <div>
+            <h1>Let's Get <span class="accent" >Started</span></h1>
+            <h2>With Your First Course</h2>
+            <img id="GetStartedLogo" src="/images/marbles/hi/courses.png">
+        </div>
+        <div id="GetStartedButtons">
+            <a href="tel:714-794-5693" class="ContactButton Scream">
+                <div style="text-align: center" class="SmallIcon">📱</div>
+                <div style="text-align: center; font-size: 1rem">
+                    <h3 class="ContactTitle">Call or Text</h3>
+                    <div>(714) 794-5693</div>
+                </div>
+            </a>
+            <a href="mailto: courses@alexanderfarrell.com" class="ContactButton Scream">
+                <div style="text-align: center" class="SmallIcon">✉️</div>
+                <div style="text-align: center; font-size: 0.8rem">
+                    <h3 class="ContactTitle">Send Email</h3>
+                    <div>courses@alexanderfarrell.com</div>
+                </div>
+            </a>
+<!--            <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/alexander-crash-courses/1-hour-lesson?background_color=000827&text_color=ffffff&primary_color=ac0053'}); return false" class="ContactButton Scream"-->
+            <a href="https://calendly.com/alexander-crash-courses/1-hour-lesson" class="ContactButton Scream">
+                <div style="text-align: center" class="SmallIcon">🕐</div>
+                <div style="text-align: center; font-size: 1rem">
+                    <h3 class="ContactTitle">Book Online</h3>
+                    <div>One Hour Course</div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+
+<!--    </div>-->
+<!--    <div>-->
+<!--    </div>-->
+<!--    <div>-->
+
+<!--    </div>-->
+<!--    <h3>Schedule</h3>-->
+
+
+
+<!--    <div> &lt;!&ndash;style="/*display: grid; place-content: space-between; grid-column-gap: 20px;  !*width: 80%;*! margin-left: auto; margin-right: auto*/"&ndash;&gt;-->
+<!--        <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/alexander-crash-courses/1-hour-lesson?background_color=000827&text_color=ffffff&primary_color=ac0053'});return false;" class="">-->
+<!--            &lt;!&ndash;            <div style="text-align: center" class="Icon">🕐</div>&ndash;&gt;-->
+
+<!--            <img class="CourseIcon" src="courses.png">-->
+<!--            <div style="text-align: center">One Hour Course</div>-->
+<!--            <div style="text-align: center"> $25</div>-->
+<!--        </a>-->
+<!--&lt;!&ndash;        <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/alexander-crash-courses/2-hour-lesson?background_color=000827&text_color=ffffff&primary_color=ac0053'});return false;" class="Scream">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div>&ndash;&gt;-->
+<!--&lt;!&ndash;                <img class="CourseIcon" src="courses.png">&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            &lt;!&ndash;            <div style="text-align: center;" class="Icon">🕑</div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;            <div style="text-align: center">Two Hour Course</div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <div style="text-align: center">$45</div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </a>&ndash;&gt;-->
+<!--    </div>-->
+<!--    <div id="Extra">-->
+<!--        <a href="/courses/prepare" class="Button">-->
+<!--            <h2>Prepare</h2>-->
+<!--            <p>What obstacles may someone encounter while learning?</p>-->
+<!--        </a>-->
+<!--&lt;!&ndash;        <a href="/courses/lang" class="Scream">&ndash;&gt;-->
+<!--&lt;!&ndash;            <h2>Pick a Language</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;            <p>How does one get started on their own?</p>&ndash;&gt;-->
+<!--&lt;!&ndash;        </a>&ndash;&gt;-->
+<!--&lt;!&ndash;        <a href="/courses/ideas" class="Scream">&ndash;&gt;-->
+<!--&lt;!&ndash;            <h2>Project Ideas</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;            <p>Do you have ideas for someone's next apps, website or game?</p>&ndash;&gt;-->
+<!--&lt;!&ndash;        </a>&ndash;&gt;-->
+<!--&lt;!&ndash;        <a href="/courses/curriculum" class="Scream">&ndash;&gt;-->
+<!--&lt;!&ndash;            <h2>Explore Curriculum</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;            <p>What specifically do the courses teach?</p>&ndash;&gt;-->
+<!--&lt;!&ndash;        </a>&ndash;&gt;-->
+<!--        <a href="/courses/guide" class="Button">-->
+<!--            <h2>Tutorials</h2>-->
+<!--            <p>Do you have tutorials online? </p>-->
+<!--        </a>-->
+<!--&lt;!&ndash;        <a href="/courses/philosophy" class="Scream">&ndash;&gt;-->
+<!--&lt;!&ndash;            <h2>Philosophy</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;            <p>How do you teach? </p>&ndash;&gt;-->
+<!--&lt;!&ndash;        </a>&ndash;&gt;-->
+<!--    </div>-->
+
+</div>

@@ -12,7 +12,7 @@ const api_graph = new route_1.Page('', [
         new route_1.Page("Curriculum"),
         new guide_1.Guide(),
         new route_1.Page("Philosophy")
-    ], 'courses.ejs', 'Courses', {
+    ], 'courses_o.ejs', 'Courses', {
         languages: languages_available_1.languages_available
     }),
     new route_1.Page("Articles"),

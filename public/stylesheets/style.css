@@ -329,16 +329,6 @@ footer {
   z-index: -1;
 }
 
-#Content {
-  width: 95%;
-  max-width: 95vh;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: auto;
-  margin-right: auto;
-  box-sizing: border-box;
-}
-
 #CoursesHome {
   background: radial-gradient(#536093, #293164);
   padding: 0 5%;

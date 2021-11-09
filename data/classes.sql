@@ -1,6 +1,6 @@
 call add_course_class('Embark', 'Begin your journey with programming!', '');
 call add_course_class('Fundamentals',
-                      'Learn foundational concepts behind most programming languages. (Coming soon online)', '');
+                      'Learn foundational concepts behind most programming lang. (Coming soon online)', '');
 call add_course_class('Concepts', 'Dive deeper after grasping the fundamentals. (Coming soon online)', '');
 call add_course_class('Clients', 'Build applications a person can interact with! (Coming soon online)', '');
 call add_course_class('Servers', 'Connect applications and devices together! (Coming soon online)', '');
@@ -98,10 +98,10 @@ call add_lesson('Begin Your Journey',
 <p>The first courses will take you through several of the fundamentals of programming.</p>
 <hr>
 <h3>Concepts</h3>
-<p>Many languages have similar concepts.</p>
+<p>Many lang have similar concepts.</p>
 <p>By learning these concepts: </p>
 <ul>
-    <li>One can understand different languages faster</li>
+    <li>One can understand different lang faster</li>
     <li>One can learn programming easier</li>
     <li>One can better communicate with those with different programming backgrounds.</li>
     <li>One can gain a deeper understanding of how software works.</li>
