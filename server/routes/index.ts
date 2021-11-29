@@ -2,18 +2,29 @@ import {Application} from "express";
 import {Page, SetupRouteGraph} from "./route";
 import {Guide} from "../apps/guide";
 import {languages_available} from "../apps/languages_available";
+import {Courses} from "../apps/courses";
 
 const api_graph = new Page('', [
-    new Page('Courses', [
+    /*new Page('Courses', [
+        new Page("Languages", [
+
+        ], "courses/by_language.ejs", "Courses by Language", {}),
+        new Page("Topics", [
+
+        ], 'courses/by_topic.ejs', "Courses by Topic", {}),
+        new Page("Tutoring", [], 'courses/tutoring/ejs', 'Tutoring', {}),
+        new Page("Consultation", [],
+            'courses/consultation.ejs', "Consultation", {}),
         new Page("Prepare"),
         new Page("Languages"),
         new Page("Ideas"),
         new Page("Curriculum"),
         new Guide(),
         new Page("Philosophy")
-    ], 'courses_o.ejs', 'Courses', {
+    ], 'courses/courses.ejs', 'Courses', {
         languages: languages_available
-    }),
+    })*/
+    new Courses(),
     new Page("Articles"),
     new Page("Work", [
         new Page("Ordered_Energy"),

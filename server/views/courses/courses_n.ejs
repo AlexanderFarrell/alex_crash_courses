@@ -1,0 +1,105 @@
+<%
+    
+
+    function Repeat(num, str) {
+        var retVal = [];
+        for (var i = 0; i < num; i++) {
+            retVal.push(str)
+        }
+        return retVal.join(" ");
+    }
+%>
+
+<style>
+</style>
+<h1>Learn to Code</h1>
+<!--<img style="width: 4rem" src="images/marbles/hi/courses.png">-->
+<!--<h1>-->
+<!--    Learn to Code-->
+<!--</h1>-->
+<!--<div style="max-width: 300px; margin: auto; text-align: center">-->
+<!--    How can I help?-->
+<!--</div>-->
+
+<!--<a href="<%= categories[0].url%>">-->
+<!--    <div class="Button" style="color: white; margin: 5px; text-align: center">-->
+<!--        <div><%= categories[0].name %></div>-->
+<!--        <div><%= categories[0].desc%></div>-->
+<!--    </div>-->
+<!--</a>-->
+<div style="display: grid; place-items: center; width: 100%">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; place-items: center">
+        <div>
+            <div>Offering one-on-one courses or assistance in programming for $25 an hour. </div>
+            <div style="display: grid; padding: 5px; grid-gap: 5px; grid-template-rows: <%- Repeat(categories.length, "1fr")%>;">
+                <% for (var i = 0; i < categories.length; i++) { %>
+                    <a class="Button" href="/courses/<%= categories[i].url%>">
+                        <div style="color: white;">
+                            <div><%- categories[i].verb %></div>
+                            <div><%- categories[i].desc%></div>
+                        </div>
+                    </a>
+                <% } %>
+            </div>
+        </div>
+
+        <img style="width: 25vmin" src="/images/marbles/hi/courses.png">
+    </div>
+</div>
+
+<div id="Languages_1" style="background-color: #244279">
+    <h1>Learn a Language</h1>
+    <div style="text-align: center">Offering One-on-One courses or assistance in these languages.</div>
+    <div class="LanguagesContainer" style="text-align: left">
+        <% for (var i = 0; i < languages.length; i++) { %>
+<!--            <a style="padding: 0; text-align: left" href="<%= languages[i].page%>">-->
+<!--                -->
+<!--            </a>-->
+            <div class="LanguageItem" style="background-color: #23004d">
+                <div style="text-align: center">
+                    <div>
+                        <!--                            <i style="font-size: 3rem; color: <%= languages[i].i_color%>" class="<%= languages[i].logo_i%>"></i>-->
+                        <div>
+                            <img style="filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.91)); -webkit-filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.83))"  src="<%= languages[i].logo%>">
+
+                        </div>
+                    </div>
+                    <div style="">
+                                                    <%- languages[i].name %>
+
+                    </div>
+                </div>
+
+<!--                <div class="CourseDetails">-->
+<!--&lt;!&ndash;                    <div style="font-size: 1.5rem; font-weight: lighter; color: <%= languages[i].title_color%>"><%= languages[i].name %></div>&ndash;&gt;-->
+<!--                    &lt;!&ndash;                        <div class="RegText"><%= languages[i].desc%></div>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <div style="font-weight: lighter"><button>Course</button> <button>Get Assistance</button></div>&ndash;&gt;-->
+<!--                </div>-->
+            </div>
+        <% } %>
+    </div>
+</div>
+
+
+<div id="HowDoI" style="background-color: #000031">
+    <!--    <h1>Learn by Topic</h1>-->
+    <div style="text-align: center">Where would you like to begin?</div>
+    <div class="CoursesContainer" style="grid-template-rows: 1fr 1fr 1fr;">
+        <% for (var i = 0; i < uses.length; i++) { %>
+            <a href="<%= uses[i].page%>">
+                <div class="CourseItem" style="background: <%- uses[i].background%>;">
+                    <img style="filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.91)); -webkit-filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.83))" src="<%= uses[i].icon%>">
+                    <div class="CourseDetails">
+                        <div style="font-size: 1.5rem; font-weight: lighter; color: <%- uses[i].title_color%>"><%= uses[i].verb%></div>
+                        <div class="RegText"><%= uses[i].desc%></div>
+                        <div style="font-size: 0.7rem; font-weight: lighter"><%= uses[i].name %></div>
+                    </div>
+                </div>
+            </a>
+        <% } %>
+    </div>
+</div>
+
+
+
+

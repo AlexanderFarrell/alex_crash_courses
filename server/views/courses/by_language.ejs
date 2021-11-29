@@ -1,0 +1,43 @@
+<%
+
+
+function Repeat(num, str) {
+    var retVal = [];
+    for (var i = 0; i < num; i++) {
+        retVal.push(str)
+    }
+    return retVal.join(" ");
+}
+ %>
+
+<div id="Languages_1">
+    <h1>Learn a Language</h1>
+    <div style="text-align: center">Offering one-on-one courses in these languages.</div>
+    <div class="CoursesContainer" style="text-align: left">
+        <% for (var i = 0; i < languages.length; i++) { %>
+            <a class="Button" style="padding: 0; text-align: left" href="<%= languages[i].page%>">
+                <div class="CourseItem" >
+                    <div style="text-align: center">
+                        <div>
+                            <!--                            <i style="font-size: 3rem; color: <%= languages[i].i_color%>" class="<%= languages[i].logo_i%>"></i>-->
+                            <div>
+                                <img  style="filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.91)); -webkit-filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.83))"  src="<%= languages[i].logo%>">
+
+                            </div>
+                        </div>
+                        <div style="font-size: 0.7rem; ">
+                            <!--                            <%= languages[i].name %>-->
+
+                        </div>
+                    </div>
+
+                    <div class="CourseDetails">
+                        <div style="font-size: 1.5rem; font-weight: lighter; color: <%= languages[i].title_color%>">Learn <%= languages[i].name %></div>
+                        <!--                        <div class="RegText"><%= languages[i].desc%></div>-->
+                        <div style="font-size: 0.7rem; font-weight: lighter"><%= languages[i].name %> Courses</div>
+                    </div>
+                </div>
+            </a>
+        <% } %>
+    </div>
+</div>
