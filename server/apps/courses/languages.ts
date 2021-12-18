@@ -42,6 +42,17 @@ export const languages = [
         title_color: "hsl(0,0%,100%)"
     },
     {
+        name: "C",
+        icon: "/images/marbles/hi/d.png",
+        logo: "/images/lang/c.svg",
+        logo_i: "devicon-rust-plain",
+        page: "",
+        desc: "Build powerful apps. ",
+        i_color: "hsl(0,0%,100%)",
+        background: "hsl(212,100%,7%)",
+        title_color: "hsl(0,0%,100%)"
+    },
+    {
         name: "C#",
         icon: "/images/marbles/hi/d.png",
         logo: "/images/lang/csharp.svg",
@@ -96,7 +107,7 @@ export const languages = [
         title_color: "hsl(0,0%,100%)"
     },
     {
-        name: "SQL<div style='font-size: 0.7rem'> (Postgres)</div>",
+        name: "SQL (Postgres)",
         icon: "/images/marbles/hi/d.png",
         logo: "/images/lang/postgresql.svg",
         logo_i: "devicon-postgresql-plain",

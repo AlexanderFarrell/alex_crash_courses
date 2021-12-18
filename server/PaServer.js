@@ -56,7 +56,7 @@ class PaServer {
         const port = process.env.PORT || 3000;
         this.Express.listen(port, () => {
             console.log(`Listening on ${port}`);
-            console.log(`View at localhost:${port} if local.`);
+            console.log(`View at http://localhost:${port} if local.`);
         });
     }
 }

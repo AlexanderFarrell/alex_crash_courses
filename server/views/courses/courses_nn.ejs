@@ -6,10 +6,9 @@
             <div style="padding: 5%; display: grid; grid-gap: 10px; grid-template-rows: auto auto auto auto; grid-template-columns: 1fr; align-items: center; align-content: center">
                 <h1>Learn to <span class="accent">Code</span></h1>
                 <div>
-                    Offering One-on-One programming courses & assistance for $25 an hour.
+                    One-on-One remote tutoring or courses available for $25 an hour.
                 </div>
                 <div class="Button">Contact</div>
-                <div class="Button">Explore Courses</div>
             </div>
         </div>
     </div>
@@ -17,18 +16,134 @@
 
 <!-- Features -->
 <div>
-    <div>
-        <h1>Get Help in Over 27 Different Topics</h1>
-        <div>Need tutoring or assistance? Take a look at this list or let's get in touch.</div>
+    <div class="ContentItem">
+        <h1>Learn by Language.</h1>
+        <p style="text-align: center">Choose a language below for tutoring or courses.</p>
+        <div id="LessonsContainer">
+            <% for (var i = 0; i < languages.length; i++) { %>
+                <div class="language-item" style="background: <%- languages[i].background%>">
+                    <img style="padding-left: 10%; padding-right: 10%;" src="<%- languages[i].logo %>">
+                    <div style="font-size: 1rem; text-align: center"><%- languages[i].name %></div>
+                </div>
+            <% } %>
+        </div>
     </div>
-    <div>
-        <h1>Create or Expand Your Portfolio</h1>
-        <div>Learn to build websites, apps, games and more.</div>
+<!--    <div class="blueMid">-->
+<!--        <h1>Create or Expand Your Portfolio</h1>-->
+<!--        <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 20px; display: grid; grid-gap: 20px">-->
+<!--            <img style="border-radius: 10px" src="images/auth.png">-->
+<!--            <div>-->
+<!--                Create websites and applications.-->
+<!--            </div>-->
+<!--            <img style="border-radius: 10px" src="images/games/oe.jpg">-->
+<!--            <div>-->
+
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+    <!--<div class="blueMid">
+        <div class="ContentItem">
+            <h1>Move from Start to Finish</h1>
+
+            <div style="display: grid; grid-template-columns: 1fr 3fr; padding: 20px; grid-gap: 20px">
+                <div style="display: grid; grid-template-columns: 1fr; grid-gap: 20px">
+                    <div id="PlanButton" class="Button">Plan</div>
+                    <div id="DesignButton" class="Button">Design</div>
+                    <div id="CreateButton" class="Button">Create</div>
+                    <div id="TestButton" class="Button">Test</div>
+                    <div id="DeployButton" class="Button">Deploy</div>
+                </div>
+                <div>
+                    <div id="PlanScreen">
+                        <div style=" padding: 5% 20%;">
+                            <div style="font-size: 0.8rem; user-select: none; padding: 20px; color: black; text-shadow: none; background: white; box-shadow: 1px 1px 5px black">
+                                <h1 style="border-bottom: 1px #026aff solid; color: #026aff;">Planner Application</h1>
+                                <p>Planner will allow the user to set goals.</p>
+                                <p>Planner will allow the user to keep track of their time.</p>
+                            </div>
+                        </div>
+                        <div style="text-align: center">Specify what applications need to do by eliciting requirements.</div>
+                    </div>
+                    <div id="DesignScreen">
+                        <div>
+
+                        </div>
+                        <div>Chart a course based on requirements.</div>
+                    </div>
+                    <div id="CreateScreen">
+                        <div>Construct solutions with code & tools.</div>
+                    </div>
+                    <div id="TestScreen">
+                        <div>Verify your product does what you intended it to do.</div>
+                    </div>
+                    <div id="DeployScreen">
+                        <div>Move projects from backstage to front stage.</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>-->
+    <div id="HowDoI" style="background-color: #000031">
+        <!--    <h1>Learn by Topic</h1>-->
+        <div class="ContentItem">
+            <h1>Develop Powerful Skills</h1>
+            <p style="text-align: center">Choose a topic to begin learning.</p>
+            <div class="CoursesContainer" style="grid-template-rows: 1fr 1fr 1fr;">
+                <% for (var i = 0; i < uses.length; i++) { %>
+                    <a href="<%= uses[i].page%>">
+                        <div class="CourseItem" style="background: <%- uses[i].background%>;">
+                            <img style="filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.91)); -webkit-filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.83))" src="<%= uses[i].icon%>">
+                            <div class="CourseDetails">
+                                <div style="font-size: 1.5rem; font-weight: lighter; color: <%- uses[i].title_color%>"><%= uses[i].verb%></div>
+                                <div class="RegText"><%= uses[i].desc%></div>
+                                <div style="font-size: 0.7rem; font-weight: lighter"><%= uses[i].name %></div>
+                            </div>
+                        </div>
+                    </a>
+                <% } %>
+            </div>
+        </div>
+
     </div>
-    <div>
-        <h1>Move from Start to Finish</h1>
-        <div>Learn to plan, design, create, test and deploy software.</div>
+    <div class="StretchWidth" style="background: hsl(230,38%,36%)">
+        <div class="ContentItem" style="padding-top: 1rem">
+            <div class="Benefit BenefitR">
+                <h3 class="BenefitTitle">Learn How to Build Apps, Games and Websites</h3>
+                <div class="BenefitImage">
+                    <img src="images/auth.png">
+                </div>
+                <div class="BenefitDescription">Start your portfolio of software projects. Learn how to plan, design, create, test and even deploy/publish your own projects! Get one-on-one help. </div>
+            </div>
+            <div class="Benefit BenefitR">
+                <h3 class="BenefitTitle">Cover Fundamentals</h3>
+                <div class="BenefitImage">
+                    <img src="images/code.png">
+                </div>
+                <div class="BenefitDescription">Learn concepts in computer programming. <span class="accent">Gain confidence with code.</span> </div>
+            </div>
+            <!--            <div class="Benefit BenefitR">-->
+            <!--                <h3 class="BenefitTitle">Enjoy One-on-One Help</h3>-->
+            <!--                <div class="BenefitImage">-->
+            <!--                    <img src="images/food.png">-->
+            <!--                </div>-->
+            <!--                <div class="BenefitDescription">My students can ask questions, and I adapt the courses to them. I believe in my students, and want to see their brilliant talents flourish. </div>-->
+            <!--            </div>-->
+            <!--            <div class="Benefit BenefitR">-->
+            <!--                <h3 class="BenefitTitle">Learn & Use Several Technologies</h3>-->
+            <!--                <div class="BenefitImage">-->
+            <!--                    <img src="images/pack.png">-->
+            <!--                </div>-->
+            <!--                <div class="BenefitDescription">My students learn several technologies such as Databases, Web Browsers, Servers, Version Control, Shaders, NPM, NodeJS, Unity and more during their courses.        </div>-->
+            <!--            </div>-->
+        </div>
     </div>
+<!--    <div>-->
+<!--        <h1>Leverage Powerful Tools</h1>-->
+<!--        <% for (var i = 0; i < tools.length; i++) { %>-->
+<!--            <div><%- tools[i].name %></div>-->
+<!--        <% } %>-->
+<!--    </div>-->
 </div>
 
 <!-- Courses -->
@@ -39,6 +154,50 @@
     </div>
     <% } %>
 </div>
+<div id="GetStarted" class="ContentItem">
+    <div>
+        <h1>Let's Get <span class="accent" >Started</span></h1>
+        <h2>With Your First Course</h2>
+        <img id="GetStartedLogo" src="/images/marbles/hi/courses.png">
+    </div>
+    <div id="GetStartedButtons">
+        <a href="https://calendly.com/alexander-crash-courses/1-hour-lesson" class="ContactButton Scream">
+            <div style="text-align: center" class="SmallIcon">🕐</div>
+            <div style="text-align: center; font-size: 1rem">
+                <h3 class="ContactTitle">Book Online</h3>
+                <div>One Hour Session</div>
+            </div>
+        </a>
+        <a href="tel:714-794-5693" class="ContactButton Scream">
+            <div style="text-align: center" class="SmallIcon">📱</div>
+            <div style="text-align: center; font-size: 1rem">
+                <h3 class="ContactTitle">Call or Text</h3>
+                <div>(714) 794-5693</div>
+            </div>
+        </a>
+        <a href="mailto: courses@alexanderfarrell.com" class="ContactButton Scream">
+            <div style="text-align: center" class="SmallIcon">✉️</div>
+            <div style="text-align: center; font-size: 0.8rem">
+                <h3 class="ContactTitle">Send Email</h3>
+                <div>courses@alexanderfarrell.com</div>
+            </div>
+        </a>
+        <!--            <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/alexander-crash-courses/1-hour-lesson?background_color=000827&text_color=ffffff&primary_color=ac0053'}); return false" class="ContactButton Scream"-->
+
+    </div>
+</div>
+<script>
+    let tabs = new Tabs();
+    tabs.AddScreenById("PlanButton", "PlanScreen");
+    tabs.AddScreenById("DesignButton", "DesignScreen");
+    tabs.AddScreenById("CreateButton", "CreateScreen");
+    tabs.AddScreenById("TestButton", "TestScreen");
+    tabs.AddScreenById("DeployButton", "DeployScreen");
+    tabs.Activate(
+        document.getElementById("PlanButton"),
+        document.getElementById("PlanScreen")
+    );
+</script>
 
 
 <!-- Topics -->
