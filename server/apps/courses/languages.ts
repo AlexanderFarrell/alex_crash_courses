@@ -21,6 +21,16 @@ export const languages = [
         title_color: "hsl(0,0%,100%)"
     },
     {
+        name: "TypeScript",
+        icon: "/images/marbles/hi/d.png",
+        logo: "/images/lang/typescript.svg",
+        logo_i: "devicon-javascript-plain",
+        desc: "Build powerful websites & more",
+        i_color: "hsl(262,100%,100%)",
+        background: "hsl(225,100%,14%)",
+        title_color: "hsl(0,0%,100%)"
+    },
+    {
         name: "Kotlin",
         icon: "/images/marbles/hi/d.png",
         logo: "/images/lang/kotlin.svg",
@@ -63,6 +73,28 @@ export const languages = [
         title_color: "hsl(0,0%,100%)"
     },
     {
+        name: "C",
+        icon: "/images/marbles/hi/d.png",
+        logo: "/images/lang/c.svg",
+        logo_i: "devicon-cplusplus-plain",
+        page: "",
+        desc: "Build powerful apps.",
+        i_color: "hsl(0,0%,100%)",
+        background: "hsl(239,100%,14%)",
+        title_color: "hsl(0,0%,100%)"
+    },
+    {
+        name: "Go",
+        icon: "/images/marbles/hi/d.png",
+        logo: "/images/lang/go.svg",
+        logo_i: "devicon-cplusplus-plain",
+        page: "",
+        desc: "Build powerful apps.",
+        i_color: "hsl(0,0%,100%)",
+        background: "hsl(239,100%,14%)",
+        title_color: "hsl(0,0%,100%)"
+    },
+    {
         name: "HTML",
         icon: "/images/marbles/hi/d.png",
         logo: "/images/lang/html.svg",
@@ -96,7 +128,8 @@ export const languages = [
         title_color: "hsl(0,0%,100%)"
     },
     {
-        name: "SQL<div style='font-size: 0.7rem'> (Postgres)</div>",
+        // name: "SQL<div style='font-size: 0.7rem'> (Postgres)</div>",
+        name: "PostgreSQL",
         icon: "/images/marbles/hi/d.png",
         logo: "/images/lang/postgresql.svg",
         logo_i: "devicon-postgresql-plain",
@@ -110,6 +143,72 @@ export const languages = [
         name: "PHP",
         icon: "/images/marbles/hi/d.png",
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+        logo_i: "devicon-php-plain",
+        page: "",
+        desc: "Servers simplified",
+        i_color: "hsl(0,0%,100%)",
+        background: "hsl(181,100%,10%)",
+        title_color: "hsl(0,0%,100%)"
+    },
+    {
+        name: "Unity",
+        icon: "/images/marbles/hi/d.png",
+        logo: "/images/lang/unity.svg",
+        logo_i: "devicon-php-plain",
+        page: "",
+        desc: "Servers simplified",
+        i_color: "hsl(0,0%,100%)",
+        background: "hsl(181,100%,10%)",
+        title_color: "hsl(0,0%,100%)"
+    },
+    {
+        name: "Heroku",
+        icon: "/images/marbles/hi/d.png",
+        logo: "/images/lang/heroku.svg",
+        logo_i: "devicon-php-plain",
+        page: "",
+        desc: "Servers simplified",
+        i_color: "hsl(0,0%,100%)",
+        background: "hsl(181,100%,10%)",
+        title_color: "hsl(0,0%,100%)"
+    },
+    {
+        name: "Git",
+        icon: "/images/marbles/hi/d.png",
+        logo: "/images/lang/git.svg",
+        logo_i: "devicon-php-plain",
+        page: "",
+        desc: "Servers simplified",
+        i_color: "hsl(0,0%,100%)",
+        background: "hsl(181,100%,10%)",
+        title_color: "hsl(0,0%,100%)"
+    },
+    {
+        name: "Express",
+        icon: "/images/marbles/hi/d.png",
+        logo: "/images/lang/express.svg",
+        logo_i: "devicon-php-plain",
+        page: "",
+        desc: "Servers simplified",
+        i_color: "hsl(0,0%,100%)",
+        background: "hsl(181,100%,10%)",
+        title_color: "hsl(0,0%,100%)"
+    },
+    {
+        name: "Sass",
+        icon: "/images/marbles/hi/d.png",
+        logo: "/images/lang/sass.svg",
+        logo_i: "devicon-php-plain",
+        page: "",
+        desc: "Servers simplified",
+        i_color: "hsl(0,0%,100%)",
+        background: "hsl(181,100%,10%)",
+        title_color: "hsl(0,0%,100%)"
+    },
+    {
+        name: "NodeJS",
+        icon: "/images/marbles/hi/d.png",
+        logo: "/images/lang/NodeJS.svg",
         logo_i: "devicon-php-plain",
         page: "",
         desc: "Servers simplified",

@@ -1,37 +1,38 @@
-<style>
-    img {
-        min-height: 100%;
-    }
-    img {
-        border-radius: 10px;
-    }
+<!--<style>-->
+<!--    img {-->
+<!--        min-height: 100%;-->
+<!--    }-->
+<!--    img {-->
+<!--        border-radius: 10px;-->
+<!--    }-->
 
-    @media
-    (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi) {
-        #MainItem {
-            grid-template-columns: 1fr;
-            width: 90%;
-            transition: 0.2s;
-            padding: 0;
-        }
-        #MainItemInfo {
-            width: 70%;
-            font-size: small;
-            padding: 0;
-        }
-        #MainItemLogo {
-            padding: 10%;
-        }
-        #MainItemDetails {
-            font-size: 1rem;
-        }
-    }
+<!--    @media-->
+<!--    (-webkit-min-device-pixel-ratio: 2),-->
+<!--    (min-resolution: 192dpi) {-->
+<!--        #MainItem {-->
+<!--            grid-template-columns: 1fr;-->
+<!--            width: 90%;-->
+<!--            height: 80vh;-->
+<!--            transition: 0.2s;-->
+<!--            padding: 0;-->
+<!--        }-->
+<!--        #MainItemInfo {-->
+<!--            width: 90%;-->
+<!--            font-size: small;-->
+<!--            padding: 0;-->
+<!--        }-->
+<!--        #MainItemLogo {-->
+<!--            padding: 20% 10%;-->
+<!--        }-->
+<!--        #MainItemDetails {-->
+<!--            font-size: 1rem;-->
+<!--        }-->
+<!--    }-->
 
-</style>
+<!--</style>-->
 
 <div style="padding: 0 0">
-    <div id="MainItem">
+    <div id="MainItem" class="ContentItem">
         <div id="MainItemInfo">
             <div>
                 <h1 id="MainItemTitle">Learn to <span class="accent" style="grid-column: 2">Code</span></h1>
@@ -122,13 +123,14 @@
 
 
     <br>
-    <div id="Languages">
+    <div id="Languages" class="ContentItem">
         <h1>Dive Into Several Topics</h1>
         <p>Cover several powerful and popular technologies to code websites, servers, statistics projects, games, databases and more. </p>
         <div id="LanguagesContainer">
             <% for (var i = 0; i < languages.length; i++) { %>
                 <div class="LanguageIcon">
-                    <%- languages[i].icon%>
+<!--                    <%- languages[i].icon %>-->
+                    <img src="<%- languages[i].logo %>">
                     <div><%= languages[i].name%></div>
                 </div>
             <%}%>
@@ -191,7 +193,7 @@
         <br>
     </div>
     <div id="start" style="height: 70px !important;">&nbsp;</div>
-    <div id="GetStarted">
+    <div id="GetStarted" class="ContentItem">
         <div>
             <h1>Let's Get <span class="accent" >Started</span></h1>
             <h2>With Your First Course</h2>
@@ -213,13 +215,13 @@
                 </div>
             </a>
 <!--            <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/alexander-crash-courses/1-hour-lesson?background_color=000827&text_color=ffffff&primary_color=ac0053'}); return false" class="ContactButton Scream"-->
-            <a href="https://calendly.com/alexander-crash-courses/1-hour-lesson" class="ContactButton Scream">
+            <!--<a href="https://calendly.com/alexander-crash-courses/1-hour-lesson" class="ContactButton Scream">
                 <div style="text-align: center" class="SmallIcon">🕐</div>
                 <div style="text-align: center; font-size: 1rem">
                     <h3 class="ContactTitle">Book Online</h3>
                     <div>One Hour Course</div>
                 </div>
-            </a>
+            </a>-->
         </div>
     </div>
 

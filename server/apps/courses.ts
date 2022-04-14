@@ -9,7 +9,7 @@ import {course_uses} from "./courses/uses";
 export class Courses extends RouteNode {
     constructor() {
         super('courses', async (req, res) => {
-            RenderPage(res, 'Courses', 'courses/courses_nn.ejs', data);
+            RenderPage(res, 'Courses', 'courses/courses.ejs', data);
         });
     }
 }
