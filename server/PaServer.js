@@ -26,7 +26,7 @@ class PaServer {
                 this.Express.use(enforce.HTTPS({ trustProtoHeader: true }));
                 this.Express.use(helmet({
                     contentSecurityPolicy: {
-                        directives: Object.assign(Object.assign({}, helmet.contentSecurityPolicy.getDefaultDirectives()), { "script-src": ["'self'", "https://assets.calendly.com"], "object-src": ["'self'", "https://wakatime.com"], "img-src": ["'self'", "https://img.itch.zone", "https://cdn.jsdelivr.net/gh/devicons/"], "style-src": ["'self'", "https://cdn.jsdelivr.net/gh/devicons/", "https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/", "https://fonts.googleapis.com/", "https://assets.calendly.com/"] })
+                        directives: Object.assign(Object.assign({}, helmet.contentSecurityPolicy.getDefaultDirectives()), { "script-src": ["'self'", "https://assets.calendly.com"], "object-src": ["'self'", "https://wakatime.com"], "img-src": ["'self'", "https://img.itch.zone", "https://cdn.jsdelivr.net/gh/devicons/"], "style-src": ["'self'", "'unsafe-inline", "https://cdn.jsdelivr.net/gh/devicons/", "https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/", "https://fonts.googleapis.com/", "https://assets.calendly.com/"] })
                     }
                 }));
                 (0, database_1.SetupDatabaseProduction)();
