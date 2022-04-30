@@ -3,24 +3,28 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.SetupIndexApi = void 0;
 const route_1 = require("./route");
 const guide_1 = require("../apps/guide");
-const languages_available_1 = require("../apps/languages_available");
 const courses_1 = require("../apps/courses");
 const api_graph = new route_1.Page('', [
-    new route_1.Page('Courses', [
-        new route_1.Page("Languages", [], "courses/by_language.ejs", "Courses by Language", {}),
-        new route_1.Page("Topics", [], 'courses/by_topic.ejs', "Courses by Topic", {}),
-        new route_1.Page("Tutoring", [], 'courses/tutoring/ejs', 'Tutoring', {}),
-        new route_1.Page("Consultation", [], 'courses/consultation.ejs', "Consultation", {}),
-        new route_1.Page("Prepare"),
-        new route_1.Page("Languages"),
-        new route_1.Page("Ideas"),
-        new route_1.Page("Curriculum"),
-        new guide_1.Guide(),
-        new route_1.Page("Philosophy")
-    ], 'courses/courses.ejs', 'Courses', {
-        languages: languages_available_1.languages_available
-    }),
-    // new Guide(),
+    // new Page('Courses', [
+    //     new Page("Languages", [
+    //
+    //     ], "courses/by_language.ejs", "Courses by Language", {}),
+    //     new Page("Topics", [
+    //
+    //     ], 'courses/by_topic.ejs', "Courses by Topic", {}),
+    //     new Page("Tutoring", [], 'courses/tutoring/ejs', 'Tutoring', {}),
+    //     new Page("Consultation", [],
+    //         'courses/consultation.ejs', "Consultation", {}),
+    //     new Page("Prepare"),
+    //     new Page("Languages"),
+    //     new Page("Ideas"),
+    //     new Page("Curriculum"),
+    //     new Guide(),
+    //     new Page("Philosophy")
+    // ], 'courses/courses.ejs', 'Courses', {
+    //     languages: languages_available
+    // }),
+    new guide_1.Guide(),
     new courses_1.Courses(),
     new route_1.Page("Articles"),
     new route_1.Page("Work", [

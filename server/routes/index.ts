@@ -5,26 +5,26 @@ import {languages_available} from "../apps/languages_available";
 import {Courses} from "../apps/courses";
 
 const api_graph = new Page('', [
-    new Page('Courses', [
-        new Page("Languages", [
-
-        ], "courses/by_language.ejs", "Courses by Language", {}),
-        new Page("Topics", [
-
-        ], 'courses/by_topic.ejs', "Courses by Topic", {}),
-        new Page("Tutoring", [], 'courses/tutoring/ejs', 'Tutoring', {}),
-        new Page("Consultation", [],
-            'courses/consultation.ejs', "Consultation", {}),
-        new Page("Prepare"),
-        new Page("Languages"),
-        new Page("Ideas"),
-        new Page("Curriculum"),
-        new Guide(),
-        new Page("Philosophy")
-    ], 'courses/courses.ejs', 'Courses', {
-        languages: languages_available
-    }),
-    // new Guide(),
+    // new Page('Courses', [
+    //     new Page("Languages", [
+    //
+    //     ], "courses/by_language.ejs", "Courses by Language", {}),
+    //     new Page("Topics", [
+    //
+    //     ], 'courses/by_topic.ejs', "Courses by Topic", {}),
+    //     new Page("Tutoring", [], 'courses/tutoring/ejs', 'Tutoring', {}),
+    //     new Page("Consultation", [],
+    //         'courses/consultation.ejs', "Consultation", {}),
+    //     new Page("Prepare"),
+    //     new Page("Languages"),
+    //     new Page("Ideas"),
+    //     new Page("Curriculum"),
+    //     new Guide(),
+    //     new Page("Philosophy")
+    // ], 'courses/courses.ejs', 'Courses', {
+    //     languages: languages_available
+    // }),
+    new Guide(),
     new Courses(),
     new Page("Articles"),
     new Page("Work", [
