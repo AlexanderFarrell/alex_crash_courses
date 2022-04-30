@@ -11,7 +11,11 @@ export class NotFound implements App {
 
     SetupRoutes(app: e.Application) {
         app.use((req, res, next) => {
-            res.render('template', { title: 'Not Found' + " - Alexander Farrell", content: 'pages/not_found.ejs'})
+            NotFound.RenderNotFound(res);
         })
+    }
+
+    static RenderNotFound(res) {
+        res.render('template', { title: 'Not Found' + " - Alexander Farrell", content: 'pages/not_found.ejs'})
     }
 }

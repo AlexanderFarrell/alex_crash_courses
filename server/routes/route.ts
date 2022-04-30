@@ -77,7 +77,7 @@ export class RouteNode {
     }
 }
 
-export function RenderPage(res, title: string, page: string, data) {
+export function RenderPage(res, title: string, page: string, data = {}) {
     data['title'] = title + ' - Alexander Farrell';
     data['content'] = page;
     res.render('template', data)

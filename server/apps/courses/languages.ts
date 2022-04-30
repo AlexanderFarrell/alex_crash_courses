@@ -30,16 +30,16 @@ export const languages = [
         background: "hsl(225,100%,14%)",
         title_color: "hsl(0,0%,100%)"
     },
-    {
-        name: "Kotlin",
-        icon: "/images/marbles/hi/d.png",
-        logo: "/images/lang/kotlin.svg",
-        logo_i: "devicon-kotlin-plain",
-        desc: "Build powerful apps with JVM",
-        i_color: "hsl(0,0%,100%)",
-        background: "hsl(0,0%,14%)",
-        title_color: "hsl(0,0%,100%)"
-    },
+    // {
+    //     name: "Kotlin",
+    //     icon: "/images/marbles/hi/d.png",
+    //     logo: "/images/lang/kotlin.svg",
+    //     logo_i: "devicon-kotlin-plain",
+    //     desc: "Build powerful apps with JVM",
+    //     i_color: "hsl(0,0%,100%)",
+    //     background: "hsl(0,0%,14%)",
+    //     title_color: "hsl(0,0%,100%)"
+    // },
     {
         name: "Java",
         icon: "/images/marbles/hi/d.png",

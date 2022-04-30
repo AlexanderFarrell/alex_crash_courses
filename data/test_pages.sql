@@ -39,6 +39,8 @@ call add_page('Fractals', '', '<style>
 <h3>Uncharted, Endless Forest</h3>
 <img src="/images/fractal11.jpg">', 'page');
 
+call add_page('Void Money', '', '');
+
 call add_page('Space', '', '<style>
     img {
         border-radius: 18px;

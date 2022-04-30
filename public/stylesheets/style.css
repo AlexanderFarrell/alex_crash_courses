@@ -163,7 +163,7 @@ button:hover {
 
 .ContentItem {
   width: 95%;
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -389,6 +389,14 @@ button:hover {
 
 .turquoiseMid {
   background: radial-gradient(#0c70a6, #06334d);
+}
+
+.aquaMid {
+  background: radial-gradient(#427cd2, #001b2a);
+}
+
+.springMid {
+  background: radial-gradient(#42d2c1, #002a1d);
 }
 
 .MainMenuScreen img {

@@ -92,7 +92,7 @@ class RouteNode {
     }
 }
 exports.RouteNode = RouteNode;
-function RenderPage(res, title, page, data) {
+function RenderPage(res, title, page, data = {}) {
     data['title'] = title + ' - Alexander Farrell';
     data['content'] = page;
     res.render('template', data);
