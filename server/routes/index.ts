@@ -5,7 +5,7 @@ import {languages_available} from "../apps/languages_available";
 import {Courses} from "../apps/courses";
 
 const api_graph = new Page('', [
-    /*new Page('Courses', [
+    new Page('Courses', [
         new Page("Languages", [
 
         ], "courses/by_language.ejs", "Courses by Language", {}),
@@ -23,8 +23,8 @@ const api_graph = new Page('', [
         new Page("Philosophy")
     ], 'courses/courses.ejs', 'Courses', {
         languages: languages_available
-    })*/
-    new Guide(),
+    }),
+    // new Guide(),
     new Courses(),
     new Page("Articles"),
     new Page("Work", [

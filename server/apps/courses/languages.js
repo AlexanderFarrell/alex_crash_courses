@@ -211,7 +211,7 @@ exports.languages = [
     {
         name: "NodeJS",
         icon: "/images/marbles/hi/d.png",
-        logo: "/images/lang/NodeJS.svg",
+        logo: "/images/lang/nodejs.svg",
         logo_i: "devicon-php-plain",
         page: "",
         desc: "Servers simplified",
