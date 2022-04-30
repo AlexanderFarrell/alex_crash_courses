@@ -24,6 +24,7 @@ const api_graph = new Page('', [
     ], 'courses/courses.ejs', 'Courses', {
         languages: languages_available
     })*/
+    new Guide(),
     new Courses(),
     new Page("Articles"),
     new Page("Work", [

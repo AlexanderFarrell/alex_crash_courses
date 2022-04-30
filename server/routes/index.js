@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SetupIndexApi = void 0;
 const route_1 = require("./route");
+const guide_1 = require("../apps/guide");
 const courses_1 = require("../apps/courses");
 const api_graph = new route_1.Page('', [
     /*new Page('Courses', [
@@ -23,6 +24,7 @@ const api_graph = new route_1.Page('', [
     ], 'courses/courses.ejs', 'Courses', {
         languages: languages_available
     })*/
+    new guide_1.Guide(),
     new courses_1.Courses(),
     new route_1.Page("Articles"),
     new route_1.Page("Work", [
