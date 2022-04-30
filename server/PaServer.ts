@@ -39,8 +39,8 @@ export class PaServer {
                             ...helmet.contentSecurityPolicy.getDefaultDirectives(),
                             "script-src": ["'self'", "https://assets.calendly.com"],
                             "object-src": ["'self'", "https://wakatime.com"],
-                            "img-src": ["'self'", "https://img.itch.zone"],
-                            "style-src": ["'self'", "https://cdn.jsdelivr.net/gh/devicons/"]
+                            "img-src": ["'self'", "https://img.itch.zone", "https://cdn.jsdelivr.net/gh/devicons/"],
+                            "style-src": ["'self'", "https://cdn.jsdelivr.net/gh/devicons/", "https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/", "https://fonts.googleapis.com/", "https://assets.calendly.com/"]
                         }
                     }
                 }))
