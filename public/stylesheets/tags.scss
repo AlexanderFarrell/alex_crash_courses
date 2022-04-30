@@ -77,6 +77,12 @@ header {
   z-index: 20;
 }
 
+nav {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-evenly;
+}
+
 footer {
   width: calc(100vw);
   margin: 0;

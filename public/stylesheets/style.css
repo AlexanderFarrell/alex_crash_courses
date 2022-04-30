@@ -86,6 +86,12 @@ header {
   z-index: 20;
 }
 
+nav {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-evenly;
+}
+
 footer {
   width: 100vw;
   margin: 0;
@@ -234,6 +240,15 @@ button:hover {
 
 .RegText {
   font-size: 1rem;
+}
+
+.LightEmphasis {
+  color: #8acbff;
+}
+
+.PadLight {
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .big-items {
