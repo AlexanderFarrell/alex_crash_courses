@@ -1,20 +1,32 @@
 <div class="aquaMid" style="display: grid; place-items: center; padding: 5%">
-    <div style="max-width: 500px; justify-items: center; grid-gap: 10px">
-        <div style="place-items: center">
-            <img src="/images/marbles/hi/ColdChaos.png" style="padding-left: calc(50% - 70px); padding-right: calc(50% - 70px);">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; place-items: center;">
+        <div style="max-width: 500px; justify-items: center; grid-gap: 10px">
+            <h5>
+                Learn with Online Tutorials
+            </h5>
+            <a href="/tutorials/start">
+                <div class="Button">
+                    Get Started
+                </div>
+            </a>
+            <br style="height: 10px; margin: 0; padding: 0">
+            <a>
+                <div class="Button">
+                    Explore Topics
+                </div>
+            </a>
         </div>
-        <h5>
-            Learn to Code
-        </h5>
-<!--        <a href="/r/tutorials/start">-->
-<!--            <div class="Button" style="width: 50%; margin-left: 25%">-->
-<!--                Begin-->
-<!--            </div>-->
-<!--        </a>-->
+        <div>
+            <div style="place-items: center">
+                <img src="/images/marbles/hi/ColdChaos.png" style="padding-left: 20%; padding-right: 20%;">
+            </div>
+
+        </div>
     </div>
+
 </div>
 <style>
-    #ByLanguageTutorials {
+    .TopicItems {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(50px, 90px));
         grid-template-rows: 90px;
@@ -22,45 +34,106 @@
         grid-gap: 40px;
         place-content: center;
     }
+    .TopicItem {
+
+    }
+
+    .category {
+        display: grid;
+        align-items: center;
+        grid-gap: 10px;
+        padding: 5%;
+    }
 </style>
 
-<div class="magentaMid" style="display: grid; align-items: center; grid-gap: 10px;  padding: 5%;">
+<div class="magentaMid category" >
     <h4>Learn by Language</h4>
-    <div id="ByLanguageTutorials" style="">
+    <div class="TopicItems" style="">
         <a href="/r/tutorials/python">
-            <div class="LanguageIcon">
+            <div class="TopicItem">
                 <img src="/images/lang/python.svg">
                 Python
             </div>
         </a>
-        <a href="/r/tutorials/javascript">
-            <div class="LanguageIcon">
-                <img src="/images/lang/javascript.svg">
-                JavaScript
-            </div>
-        </a>
         <a href="/r/tutorials/html">
-            <div class="LanguageIcon">
+            <div class="TopicItem">
                 <img src="/images/lang/html.svg">
                 HTML
             </div>
         </a>
         <a href="/r/tutorials/css">
-            <div class="LanguageIcon">
+            <div class="TopicItem">
                 <img src="/images/lang/css.svg">
                 CSS
             </div>
         </a>
+        <a href="/r/tutorials/javascript">
+            <div class="TopicItem">
+                <img src="/images/lang/javascript.svg">
+                JavaScript
+            </div>
+        </a>
     </div>
-
-<!--    <a href="/r/tutorials/start">-->
-<!--        <div class="Button" style="width: 50%; margin-left: 25%">-->
-<!--            Languages-->
-<!--        </div>-->
-<!--    </a>-->
-<!--    <a href="/r/tutorials/start">-->
-<!--        <div class="Button" style="width: 50%; margin-left: 25%">-->
-<!--            Start-->
-<!--        </div>-->
-<!--    </a>-->
 </div>
+<div class="blueMid category">
+    <h4>Learn by Use Case (Coming Soon)</h4>
+    <div class="TopicItems">
+        <a>
+            <div class="TopicItem">
+                Apps
+            </div>
+        </a>
+        <a>
+            <div class="TopicItem">
+                Websites
+            </div>
+        </a>
+        <a>
+            <div class="TopicItem">
+                Games
+            </div>
+        </a>
+        <a>
+            <div class="TopicItem">
+                Servers
+            </div>
+        </a>
+        <a>
+            <div class="TopicItem">
+                Databases
+            </div>
+        </a>
+        <a>
+            <div class="TopicItem">
+                CLI
+            </div>
+        </a>
+    </div>
+</div>
+<!--<div class="magentaMid category">-->
+<!--    <h4>Concepts (Coming Soon)</h4>-->
+<!--    <div class="TopicItems">-->
+<!--        <a>-->
+<!--            <div class="TopicItem">-->
+<!--                Variables-->
+<!--            </div>-->
+<!--        </a>-->
+<!--        <a>-->
+<!--            <div class="TopicItem">-->
+<!--                Functions-->
+<!--            </div>-->
+<!--        </a>-->
+<!--        <a>-->
+<!--            <div class="TopicItem">-->
+<!--                CLI-->
+<!--            </div>-->
+<!--        </a>-->
+<!--        <a>-->
+<!--            <div class="TopicItem">-->
+<!--                CLI-->
+<!--            </div>-->
+<!--        </a>-->
+
+<!--    </div>-->
+
+<!--</div>-->

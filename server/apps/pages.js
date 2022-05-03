@@ -41,7 +41,7 @@ class Pages {
                 console.log(path_file);
                 if (fs.existsSync(path.resolve(__dirname, path_file))) {
                     console.log("Exists");
-                    (0, route_1.RenderPage)(res, ToTitleCase(title), path_file);
+                    (0, route_1.RenderPage)(res, ToTitleCase(title.replace('_', " ")), path_file);
                 }
                 else {
                     console.log("Does not Exists");

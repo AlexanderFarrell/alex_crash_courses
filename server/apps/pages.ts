@@ -39,7 +39,7 @@ export class Pages implements App {
                 console.log(path_file)
                 if (fs.existsSync(path.resolve(__dirname, path_file))) {
                     console.log("Exists");
-                    RenderPage(res, ToTitleCase(title), path_file)
+                    RenderPage(res, ToTitleCase(title.replace('_', " ")), path_file)
                 } else {
                     console.log("Does not Exists");
                     NotFound.RenderNotFound(res);
