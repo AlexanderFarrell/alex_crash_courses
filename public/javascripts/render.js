@@ -1,5 +1,3 @@
 function RenderItem() {
 
 }
-
-function 
