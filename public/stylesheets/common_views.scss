@@ -38,10 +38,6 @@
     grid-template-columns: 1fr;
   }
 
-  //.ImageItem {
-  //  height: 30vw;
-  //}
-
   .Adapt2r {
     grid-template-columns: 1fr;
   }
@@ -92,7 +88,6 @@
 .PictureButton {
   overflow: hidden;
   border-radius: 10px;
-  //background: #01105b;
   text-align: center;
   background-color: $dark-color;
   color: white !important;
@@ -183,13 +178,11 @@
 }
 
 .Button:hover {
-  //background-color: #6199d0;
-  //transform: scale(0.97);
   transition: 0.2s;
   background-color: $mid-dark-color;
 }
 
-.Scream {
+.DeepTheme {
   background: #1a1f3f;
   transition: 0.2s;
   border-radius: 10px;
@@ -197,7 +190,7 @@
   color: white !important;
 }
 
-.Scream:hover {
+.DeepTheme:hover {
   background: #232c56;
   transition: 0.2s;
 }

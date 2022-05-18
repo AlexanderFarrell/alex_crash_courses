@@ -32,9 +32,6 @@
 }
 
 #Background {
-  /*background: linear-gradient(180deg, #910057, #000000);*/
-  /*background-color: #01105b;*/
-  /*background-image: radial-gradient(rgb(0, 0, 0) 0%, rgb(0, 0, 0) 10%, rgb(0, 23, 107) 25%, rgb(0, 0, 0) 30%, rgb(0, 0, 0) 100%);*/
   background-color: $background-color;
   position: fixed;
   top: 0;
@@ -42,14 +39,4 @@
   bottom: 0;
   right: 0;
   z-index: -1;
-}
-
-#Content {
-  //width: 95%;
-  //max-width: 95vh;
-  //margin-top: 0;
-  //margin-bottom: 0;
-  //margin-left: auto;
-  //margin-right: auto;
-  //box-sizing: border-box;
 }

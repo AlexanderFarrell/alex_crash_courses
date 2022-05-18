@@ -6,3 +6,37 @@
   /*color: #b3c5ff;*/
   color: #ffaacf;
 }
+
+.mainMid {
+  background: radial-gradient(rgb(11, 28, 138), rgb(5, 6, 23));
+}
+
+
+.blueMid {
+  background: radial-gradient($background-color, $mid-dark-color);
+}
+
+.magentaMid {
+  background: radial-gradient(rgb(40, 12, 166), rgb(19, 7, 73));
+}
+
+.softMid {
+  background: radial-gradient(rgb(166, 176, 192), rgb(66, 66, 77));
+  color: #cbcbcb !important;
+}
+
+.turquoiseMid {
+  background: radial-gradient(rgb(12, 112, 166), rgb(6, 51, 77));
+}
+
+.aquaMid {
+  background: radial-gradient(rgb(66, 124, 210), rgb(0, 27, 42));
+}
+
+.springMid {
+  background: radial-gradient(rgb(66, 210, 193), rgb(0, 42, 29));
+}
+
+.strongMid {
+  background: radial-gradient(rgb(141, 4, 57), rgb(35, 0, 8));
+}
