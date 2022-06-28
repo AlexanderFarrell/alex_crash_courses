@@ -167,6 +167,10 @@ button:hover {
   text-shadow: 1px 1px 5px black;
 }
 
+.MinHeight {
+  min-height: 100vh;
+}
+
 .Products {
   background-color: #000031;
   grid-gap: 3px;
@@ -821,6 +825,80 @@ p {
   padding-right: 1rem;
 }
 
+.Games {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 10px;
+}
+
+.Game {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-gap: 15px;
+  padding: 15px;
+  border-radius: 15px;
+  color: white;
+  transition: 0.2s;
+  height: 100%;
+  text-align: center;
+  justify-items: center;
+}
+
+.Game:hover {
+  color: #ff5a98;
+}
+
+.GameDesc {
+  font-size: 0.7rem;
+}
+
+.GameBanner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 66vh;
+  object-fit: cover;
+  background-size: 100% auto;
+  background-position: center;
+  z-index: -1;
+}
+
+.GameBannerContainer {
+  position: relative;
+  height: 66vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+
+.GameTitle {
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  justify-items: center;
+  color: white;
+  transition: 0.2s;
+  user-select: none;
+}
+
+.GameTitle:hover {
+  color: white;
+  transform: scale(1.03);
+}
+
+.GameTitleInactive {
+  color: white !important;
+  transform: scale(1) !important;
+}
+
+@media screen and (max-width: 600px) {
+  .Games {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 :root {
   font-size: 125%;
   --scroll-bar: 8px;

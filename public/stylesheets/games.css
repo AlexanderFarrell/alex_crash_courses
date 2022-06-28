@@ -1,0 +1,39 @@
+.Games {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 10px;
+}
+
+.Game {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-gap: 15px;
+  padding: 15px;
+  color: white;
+  transition: 0.2s;
+  height: 100%;
+  text-align: center;
+  justify-items: center;
+}
+
+.Game:hover {
+  color: #00ff0d;
+}
+
+.GameDesc {
+  font-size: 0.7rem;
+}
+
+@media screen and (max-width: 800px) {
+  .Games {
+    grid-template-columns: 1fr;
+  }
+
+  .Game {
+    grid-template-columns: 1fr 2fr;
+    justify-items: left;
+  }
+}
+
+/*# sourceMappingURL=games.css.map */
