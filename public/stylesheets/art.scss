@@ -1,0 +1,40 @@
+.Collections {
+	display: grid;
+	//grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 10px;
+	place-content: center;
+	padding: 10px;
+	grid-template-columns: 1fr 1fr;
+}
+
+//@media only screen and (max-width: 1500px) {
+//	.Collections {
+//		grid-template-columns: 1fr 1fr;
+//	}
+//}
+//
+//@media only screen and (max-width: 800px) {
+//	.Collections {
+//		grid-template-columns: 1fr;
+//	}
+//}
+
+.Collection {
+	height: 500px;
+	background-size: 150% auto;
+	background-position: center center;
+	display: grid;
+	align-content: end;
+	box-shadow: 1px 1px 5px black;
+}
+
+.CollectionThumbnail {
+	object-fit: cover;
+	width: 300px;
+	height: 300px;
+	border-radius: 0px;
+}
+
+.CollectionText {
+	//background: rgba(0, 0, 0, 0.39);
+}

@@ -11,6 +11,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Art = void 0;
 const route_1 = require("../routes/route");
+const database_1 = require("./database");
 class Art {
     GetName() {
         return "Art";
@@ -19,10 +20,15 @@ class Art {
     }
     SetupRoutes(app) {
         app.get('/art', (req, res) => __awaiter(this, void 0, void 0, function* () {
-            (0, route_1.RenderPage)(res, 'Art', 'art.ejs', {});
+            let collections = yield this.GetCollections();
+            (0, route_1.RenderPage)(res, 'Art', 'art.ejs', { collections });
         }));
+    }
+    GetCollections() {
+        return __awaiter(this, void 0, void 0, function* () {
+            return (yield database_1.Data.Query(`select * from collection limit 100`)).rows;
+        });
     }
 }
 exports.Art = Art;
-let data = {};
 //# sourceMappingURL=art.js.map

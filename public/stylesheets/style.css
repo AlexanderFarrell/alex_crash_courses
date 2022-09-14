@@ -899,6 +899,30 @@ p {
     grid-template-columns: 1fr 1fr;
   }
 }
+.Collections {
+  display: grid;
+  grid-gap: 10px;
+  place-content: center;
+  padding: 10px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.Collection {
+  height: 500px;
+  background-size: 150% auto;
+  background-position: center center;
+  display: grid;
+  align-content: end;
+  box-shadow: 1px 1px 5px black;
+}
+
+.CollectionThumbnail {
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
+  border-radius: 0px;
+}
+
 :root {
   font-size: 125%;
   --scroll-bar: 8px;

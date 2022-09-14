@@ -218,6 +218,28 @@ exports.languages = [
         i_color: "hsl(0,0%,100%)",
         background: "hsl(181,100%,10%)",
         title_color: "hsl(0,0%,100%)"
+    },
+    // {
+    //     name: "GIMP",
+    //     icon: "/images/marbles/hi/d.png",
+    //     logo: "/images/lang/gimp.svg",
+    //     logo_i: "devicon-php-plain",
+    //     page: "",
+    //     desc: "Servers simplified",
+    //     i_color: "hsl(0,0%,100%)",
+    //     background: "hsl(181,100%,10%)",
+    //     title_color: "hsl(0,0%,100%)"
+    // },
+    {
+        name: "Blender",
+        icon: "/images/marbles/hi/d.png",
+        logo: "/images/lang/blender.svg",
+        logo_i: "devicon-php-plain",
+        page: "",
+        desc: "Servers simplified",
+        i_color: "hsl(0,0%,100%)",
+        background: "hsl(181,100%,10%)",
+        title_color: "hsl(0,0%,100%)"
     }
 ];
 const symbols = [

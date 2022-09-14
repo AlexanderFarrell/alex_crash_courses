@@ -1,1 +1,19 @@
-<h1>Art</h1>
+<div class="mainMid">
+    <div class="Collections">
+        <% for (var i = 0; i < collections.length; i++) { %>
+            <div class="Collection" style="background-image: url('<%= collections[i].thumbnail %>')">
+<!--                <img class="CollectionThumbnail" src="<%= collections[i].thumbnail %>">-->
+                <div class="CollectionText">
+                    <h2>
+                        <%= collections[i].title %>
+                    </h2>
+<!--                    <h4>-->
+<!--                        <%= collections[i].caption%>-->
+<!--                    </h4>-->
+                </div>
+            </div>
+        <% } %>
+    </div>
+
+</div>
+<!--<h1>Art</h1>-->
