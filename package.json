@@ -18,7 +18,7 @@
     "heroku-ssl-redirect": "^0.1.1",
     "http-errors": "~1.6.3",
     "jquery": "^3.6.0",
-    "morgan": "~1.9.1",
+    "morgan": "~1.10.0",
     "pg": "^8.7.1",
     "compression": "^1.7.4"
   },
